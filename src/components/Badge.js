@@ -13,6 +13,9 @@ class Badge extends React.Component{
     //super necessary
     render(){
 
+        //destructuring
+        const { avatar,firstName,lastName,jobTitle,twitter }=this.props
+
 
         return (
         <div className="badge">
@@ -22,13 +25,13 @@ class Badge extends React.Component{
             </div>
             
             <div className="badge__section-name">
-                <img className="badge__avatar" src="https://www.gravatar.com/avatar?d=identicon" alt="Profile Logo"></img>
-                <h1>{this.props.firstName} <br/>{this.props.lastName}</h1>
+                <img className="badge__avatar" src={avatar} alt="Profile Logo"></img>
+                <h1>{firstName} <br/>{lastName}</h1>
             </div>
             
             <div className="badge__section-info">
-                <h3>{this.props.jobTitle}</h3>
-                <div>{this.props.twitter}</div>
+                <h3>{jobTitle}</h3>
+                <div>{twitter}</div>
             </div>
 
             <div className="badge__footer"><p>#TedTalk</p></div>

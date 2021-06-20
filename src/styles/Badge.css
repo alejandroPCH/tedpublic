@@ -1,10 +1,12 @@
 .badge {
   background: #ffffff;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(179, 179, 179, 0.5);
+          box-shadow: 0 4px 8px 0 rgba(179, 179, 179, 0.5);
   border-radius: 8px 8px 8px 8px;
   overflow: hidden;
   min-height: 380px;
+  width: 50vw;
+  margin: 0 auto;
 }
 
 .badge__header {
