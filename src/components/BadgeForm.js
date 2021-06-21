@@ -4,34 +4,28 @@ import '../styles/BadgeForm.css'
 
 class BadgeForm extends React.Component{
 
-    state={}
-
+  
     handleSummit=(e)=>{
 
         console.log("El botón fue presionado")
 
-        console.log(this.state)
         e.preventDefault()    
 
     }
 
 
-    handleChange=(e)=>{
+    // handleChange=(e)=>{
         
         
-        // console.log(e.target.value)
+    //     // console.log(e.target.value)
+    //     // setState will put the properties you assign in state... and it will be saved
+    //     this.setState({ 
 
-        this.setState({ 
+    //         [e.target.name]:e.target.value,
+    //     })
 
-            [e.target.name]:e.target.value,
-        })
-        console.log(this.state)
-
-    }
-
-   
-
-    
+    // }
+  
     render(){
 
         return(<>
@@ -43,8 +37,8 @@ class BadgeForm extends React.Component{
                 
                     <label htmlFor="">First Name</label>
                     
-                    <input /*on react you have an "onChange" event on an input*/
-                         onChange={this.handleChange} type="text" className="form--input" name="firstName" value={this.state.FirstName} />
+                    <input /* am calling {this.props.onChange} because there is a prop sent as parameter*/
+                         onChange={this.props.onChange} type="text" className="form--input" name="firstName" value={this.props.data.firstName} />
 
                 </div>
 
@@ -52,22 +46,32 @@ class BadgeForm extends React.Component{
 
                     <label htmlFor="">Last Name</label>
                     
-                        <input onChange={this.handleChange} type="text" className="form--input" name="lastName" value={this.state.LastName} /> 
-                        </div>
+                        <input onChange={this.props.onChange} type="text" className="form--input" name="lastName" value={this.props.data.lastName} /> 
+                </div>
+                       
+              
 
-                <div className="form jobTitle">
-                         
+
+
+                <div className="form jobTitle">                       
 
                      <label htmlFor="">Job Title</label>
-                    
-                        <input onChange={this.handleChange} type="text" className="form--input" name="jobTitle" value={this.state.JobTitle} /> 
-                        </div>
+                    <input onChange={this.props.onChange} type="text" className="form--input" name="jobTitle" value={this.props.data.jobTitle} /> 
+                
+                </div>
+
+                <div className="form email">
+
+                    <label htmlFor="">Email</label>
+
+                    <input onChange={this.props.onChange} type="text" className="form--input" name="email" value={this.props.data.email} /> 
+                </div>
 
                 <div className="form twitter">
 
                     <label htmlFor="">Twitter</label>
                     
-                    <input onChange={this.handleChange} type="text" className="form--input" name="twitter" value={this.state.Twitter} /> 
+                    <input onChange={this.props.onChange} type="text" className="form--input" name="twitter" value={this.props.data.twitter} /> 
                     
                 </div>
 

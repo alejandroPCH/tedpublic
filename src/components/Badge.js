@@ -14,7 +14,7 @@ class Badge extends React.Component{
     render(){
 
         //destructuring
-        const { avatar,firstName,lastName,jobTitle,twitter }=this.props
+        const { avatar,firstName,lastName,email,jobTitle,twitter }=this.props
 
 
         return (
@@ -30,7 +30,8 @@ class Badge extends React.Component{
             </div>
             
             <div className="badge__section-info">
-                <h3>{jobTitle}</h3>
+                <h2>{jobTitle}</h2>
+                <h3>{email}</h3>
                 <div>{twitter}</div>
             </div>
 
