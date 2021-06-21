@@ -6,6 +6,15 @@ body{
 .row{
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+
+}
+.column{
+    width:100%
+}
+.badge{
+
+    order:0;
 }
 
 
@@ -17,6 +26,7 @@ body{
 
 .badge{
 
+    width: 100%;
     order:1;
 }
 
