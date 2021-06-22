@@ -3,23 +3,41 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Lato', 'Helvetica Neue', sans-serif;
-  background-color: #F4F4F7;
 }
 
 h1 {
   font-family: 'Anton', sans-serif;
+}
+
+.container--buttons {
+  margin: 2rem;
+  padding: 0.375rem 2rem;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 7px;
+  height: 25px;
 }
 
 .container__button {
@@ -27,25 +45,26 @@ h1 {
   padding: 0.375rem 2rem;
 }
 
-.button.container__button {
+.button.button__primary {
+  color: #fff;
+  background-color: #9c0909;
+  border-color: #910909;
+  text-decoration: none;
+}
+
+.button.button__primary:not(:disabled):not(.disabled):hover {
   color: #fff;
   background-color: #9c0909;
   border-color: #910909;
 }
 
-.button.container__button:not(:disabled):not(.disabled):hover {
+.button.button__primary:not(:disabled):not(.disabled):active {
   color: #fff;
   background-color: #9c0909;
   border-color: #910909;
 }
 
-.button.container__button:not(:disabled):not(.disabled):active {
-  color: #fff;
-  background-color: #9c0909;
-  border-color: #910909;
-}
-
-.button.container__button:not(:disabled):not(.disabled):focus {
+.button.button__primary:not(:disabled):not(.disabled):focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(141, 2, 2, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(141, 2, 2, 0.5);
 }

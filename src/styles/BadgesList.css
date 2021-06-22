@@ -1,5 +1,6 @@
-.badges__hero {
+.badges__cover {
   top: 0;
+  z-index: -1;
   position: absolute;
   width: 100vw;
   background-image: #0b0b0b;
@@ -11,7 +12,7 @@
   height: 100vh;
 }
 
-.badges__hero > .badges__container {
+.badges__cover > .badges__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
