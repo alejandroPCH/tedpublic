@@ -42,7 +42,8 @@ class NewBadge extends React.Component{
                 
                 <div className="container">
                     <div className="row">
-                        <div className="badge column">
+                        
+                        <div className="badge__column column">
 
                         <Badge 
                         firstName={this.state.form.firstName}
@@ -54,7 +55,7 @@ class NewBadge extends React.Component{
 
 
                         </div>
-                        <div className="form column">
+                        <div className="form__column column">
 
                         <BadgeForm onChange={this.handleChange} data={this.state.form}/>
 

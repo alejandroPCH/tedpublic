@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/images/tedtalks-logo.png'
+import logo from '../assets/images/ted-logo.png'
 import '../styles/Navbar.css'
 
 class NavBar extends React.Component{

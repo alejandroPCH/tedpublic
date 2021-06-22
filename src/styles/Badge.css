@@ -1,23 +1,40 @@
 .badge {
+  margin: 0 auto;
   background: #ffffff;
   -webkit-box-shadow: 0 4px 8px 0 rgba(179, 179, 179, 0.5);
           box-shadow: 0 4px 8px 0 rgba(179, 179, 179, 0.5);
   border-radius: 8px 8px 8px 8px;
   overflow: hidden;
   min-height: 380px;
-  width: 50vw;
+  width: 30vw;
+  min-width: 380px;
 }
 
 .badge__header {
   padding: 0.5rem 0;
-  height: 80px;
-  background: #1b1b25;
+  min-height: 80px;
+  background: #000000;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.badge__header a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.badge__header img {
+  width: 30%;
+  height: 55px;
+  min-width: 145px;
 }
 
 .badge__section, .badge__section-name, .badge__section-info {
@@ -33,7 +50,9 @@
 }
 
 .badge__section-name {
-  padding: 1rem 0;
+  height: 40vh;
+  padding: 1rem;
+  font-size: clamp(1rem, 1.5vw, 3rem);
 }
 
 .badge__section-info {
@@ -50,8 +69,8 @@
   display: block;
   border-radius: 50%;
   margin-right: 1rem;
-  width: 120px;
-  height: 120px;
+  width: clamp(60px, 20vw, 160px);
+  height: clamp(60px, 20vw, 160px);
 }
 
 .badge__footer {
@@ -59,14 +78,22 @@
   display: -ms-flexbox;
   display: flex;
   height: 54px;
+  font-size: 1.2rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #98ca3f;
+  color: #cc1a1a;
   font-weight: bold;
   font-style: italic;
+}
+
+@media screen and (max-width: 800px) {
+  .badge {
+    min-width: 270px;
+    width: 80vw;
+  }
 }
 /*# sourceMappingURL=Badge.css.map */

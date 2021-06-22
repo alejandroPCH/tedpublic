@@ -2,7 +2,7 @@ import React from 'react'
 
 import '../global.css'
 import '../styles/Badge.css'
-import confCoverPage from '../assets/images/cover-page.png'
+import Logo from '../assets/images/ted-logo.png'
 // // npm packages don't use an explicit path
 // import 'bootstrap/dist/css/bootstrap.css'
 
@@ -19,9 +19,14 @@ class Badge extends React.Component{
 
         return (
         <div className="badge">
+
+
+
                 
             <div className="badge__header">
-                <img src={confCoverPage} alt="Ted Talk Cover Page"></img>
+                <a href="#" >
+                <img src={Logo} alt="Ted Cover Page"></img>
+                </a>
             </div>
             
             <div className="badge__section-name">
@@ -35,7 +40,7 @@ class Badge extends React.Component{
                 <div>{twitter}</div>
             </div>
 
-            <div className="badge__footer"><p>#TedTalk</p></div>
+            <div className="badge__footer"><p>#Ted</p></div>
 
         </div>
 

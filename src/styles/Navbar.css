@@ -1,17 +1,16 @@
 .navbar {
-  width: 100%;
+  position: relative;
+  z-index: 1;
+  width: 100vw;
   min-width: 200px;
-  padding: 0.5rem 0;
-  background-color: #1C3643;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .navbar__ted-logo {
-  width: 100%;
-  min-width: 20px;
+  width: 20%;
+  min-width: 100px;
   position: relative;
-  top: -25px;
 }
 /*# sourceMappingURL=Navbar.css.map */
