@@ -8,13 +8,12 @@
     background-repeat: no-repeat;
     background-position:top;
     background-size: cover;
-
+    min-width: 290px;
     height: 100vh;
   }
  
 
 
-  
   .badges {
     display: flex;
     flex-direction: column;
@@ -27,14 +26,15 @@
     }
     
   }
- 
   .attendance{
     background: #FFFFFF;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.23);
     border-radius: 5px;
     display: flex;
     padding: 1rem;
-    min-width: 580px;
+    max-width: 580px;
+    min-width: 300px;
+    width: 100vw;
 
     &__avatar {
       border-radius: 50%;
@@ -49,7 +49,7 @@
         display: inline-block;
         width: 1.3rem;
         height: 1.3rem;
-        background: url('../assets/images/twitter-logo.svg');
+        background: url('../assets/icons/twitter-logo.svg');
         margin-right: 0.3rem;
         vertical-align: middle;
         background-repeat: no-repeat;

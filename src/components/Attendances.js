@@ -3,14 +3,14 @@ import React from 'react'
 export class attendances extends React.Component {
     render() {
         return (
-        <div>
+        <React.Fragment>
            
 
 
             <ul className="list-unstyled">
 
             {this.props.attendanceList.map((person)=>{
-                {console.log(person)}
+                // {console.log(person)}
                 // map is a function, so it return something
                 return(       //key is an indentifier,
                 <li key={person.id}className="attendance">
@@ -37,7 +37,7 @@ export class attendances extends React.Component {
                 })
             }
             </ul>
-        </div>
+        </React.Fragment>
 
         )
     }

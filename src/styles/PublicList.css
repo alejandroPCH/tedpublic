@@ -9,6 +9,7 @@
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
+  min-width: 290px;
   height: 100vh;
 }
 
@@ -44,7 +45,9 @@
   display: -ms-flexbox;
   display: flex;
   padding: 1rem;
-  min-width: 580px;
+  max-width: 580px;
+  min-width: 300px;
+  width: 100vw;
 }
 
 .attendance__avatar {
@@ -63,7 +66,7 @@
   display: inline-block;
   width: 1.3rem;
   height: 1.3rem;
-  background: url("../assets/images/twitter-logo.svg");
+  background: url("../assets/icons/twitter-logo.svg");
   margin-right: 0.3rem;
   vertical-align: middle;
   background-repeat: no-repeat;
@@ -72,4 +75,4 @@
 .badges_conf-logo {
   margin-bottom: 2rem;
 }
-/*# sourceMappingURL=BadgesList.css.map */
+/*# sourceMappingURL=PublicList.css.map */

@@ -3,9 +3,9 @@ import Logo from '../assets/images/ted-logo.png'
 import Attendances from '../components/Attendances'
 import {Link} from 'react-router-dom'
 
-import '../styles/BadgesList.css'
+import '../styles/PublicList.css'
 
-export class BadgesList extends React.Component{
+export class PublicList extends React.Component{
     state={
         data:
             [
@@ -39,31 +39,43 @@ export class BadgesList extends React.Component{
               ],
         }
     
+
+        constructor(props){
+          super(props)
+          console.log("soy el constructor")
+        }
+
+        componentDidMount(){
+          console.log("soy el monta la web")
+        }
+
     render() {
         return (
-            <>
+            <React.Fragment>
+          {console.log("soy el render")}
+
            <div className="background-img"></div>
                    
                    
             <div className="badges">
                                       
                 <div className="no-style-div">                    
-                        <Attendances attendanceList={this.state.data} />
+                  <Attendances attendanceList={this.state.data} />
                 
                                               
-                         <div className="badges__buttons">
-                            <Link to="/new" className="button button__primary">
-                            New Attendance
-                            </Link>
+                  <div className="badges__buttons">
+                      <Link to="/new" className="button button__primary">
+                       New Attendance
+                      </Link>
                         </div>
                 </div>
             
            </div>
 
            
-            </>
+            </React.Fragment>
         )
     }
 }
 
-export default BadgesList
+export default PublicList

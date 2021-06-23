@@ -3,7 +3,7 @@ import { BrowserRouter,Route,Switch} from 'react-router-dom'
 
 
 import Layout from './Layout'
-import BadgesList from '../pages/PublicList'
+import PublicList from '../pages/PublicList'
 import NewAttendance from '../pages/NewAttendance'
 import NotFound from '../pages/NotFound'
 
@@ -14,7 +14,7 @@ import NotFound from '../pages/NotFound'
 
         <Layout>
         <Switch>
-            <Route exact path="/" component={BadgesList} />
+            <Route exact path="/" component={PublicList} />
             <Route exact path="/new" component={NewAttendance} />
             <Route component={NotFound}/>
         </Switch> 
