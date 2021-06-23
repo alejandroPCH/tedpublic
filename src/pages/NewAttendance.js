@@ -1,5 +1,4 @@
 import React from 'react'
-import NavBar from '../components/NavBar';
 import Badge from '../components/Badge'
 import '../styles/NewBadge.css'
 
@@ -38,7 +37,6 @@ class NewBadge extends React.Component{
         return(
             <div>
                 
-                <NavBar />
                 
                 <div className="container">
                     <div className="row">

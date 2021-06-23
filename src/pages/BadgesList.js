@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from '../assets/images/ted-logo.png'
-
-import NavBar from '../components/NavBar'
+import Attendances from '../components/Attendances'
+import {Link} from 'react-router-dom'
 
 import '../styles/BadgesList.css'
 
@@ -11,7 +11,7 @@ export class BadgesList extends React.Component{
             [
                 {
                   id: "40fc-a41f-05e62b5939-a72de30c42-9deb",
-                  irstName: "Guillemo",
+                  firstName: "Guillemo",
                   lastName: "Grady",
                   email: "Leann_Berge@gmail.com",
                   jobTitle: "Senior Software Engineer",
@@ -42,21 +42,25 @@ export class BadgesList extends React.Component{
     render() {
         return (
             <>
-            <NavBar />
-            <div className="badges">
-                <div className="badges__cover">
+           <div className="background-img"></div>
                    
+                   
+            <div className="badges">
+                                      
+                <div className="no-style-div">                    
+                        <Attendances attendanceList={this.state.data} />
+                
+                                              
+                         <div className="badges__buttons">
+                            <Link to="/new" className="button button__primary">
+                            New Attendance
+                            </Link>
+                        </div>
                 </div>
-            </div>
+            
+           </div>
 
-            <div className="badges__container">
-                <div className=".container--buttons">
-            <a href ="/badges/new" className="button button__primary">
-                New Attendance
-            </a>
-            </div>
-                <h1>hola</h1>
-            </div>
+           
             </>
         )
     }

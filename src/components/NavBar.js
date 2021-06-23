@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from '../assets/images/ted-logo.png'
 import '../styles/Navbar.css'
-
+import {Link} from 'react-router-dom'
 class NavBar extends React.Component{
 
     render(){
@@ -9,10 +9,10 @@ class NavBar extends React.Component{
         return(
         <div className="navbar">
 
-            <a href="#">
+            <Link to="/">
             
             <img className="navbar__ted-logo" src={logo}></img>
-            </a>
+            </Link>
         </div>) 
 
     }

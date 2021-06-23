@@ -1,6 +1,6 @@
-.badges__cover {
-    top: 0;
+.background-img {
     z-index: -1;
+    top:0;
     position: absolute;
     width: 100vw;
     background-image:rgb(11,11,11);
@@ -11,26 +11,62 @@
 
     height: 100vh;
   }
+ 
+
+
   
-  .badges__cover>.badges__container {
+  .badges {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
   
-  .badges__container {
-    width: 100%;
-    max-width: 580px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    &__buttons{
+      justify-content: flex-end;
+      display: flex;
+      margin-top: 1rem;
+    }
+    
   }
+ 
+  .attendance{
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.23);
+    border-radius: 5px;
+    display: flex;
+    padding: 1rem;
+    min-width: 580px;
+
+    &__avatar {
+      border-radius: 50%;
+      background: #a3a3a3;
+      margin-right: 0.5rem;
+      width: 80px;
+      height: 80px;
+    }
+    &__twitter {
+      color: #1da1f2;
+      &--logo {
+        display: inline-block;
+        width: 1.3rem;
+        height: 1.3rem;
+        background: url('../assets/images/twitter-logo.svg');
+        margin-right: 0.3rem;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+      }
+      
+    }
+    
   
+  }
+
+
+
+
   .badges_conf-logo {
     margin-bottom: 2rem;
   }
   
-  .badges__buttons {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 1rem;
-  }
+  
+ 
+

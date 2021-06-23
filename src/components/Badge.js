@@ -3,6 +3,7 @@ import React from 'react'
 import '../global.css'
 import '../styles/Badge.css'
 import Logo from '../assets/images/ted-logo.png'
+import {Link} from 'react-router-dom'
 // // npm packages don't use an explicit path
 // import 'bootstrap/dist/css/bootstrap.css'
 
@@ -24,9 +25,9 @@ class Badge extends React.Component{
 
                 
             <div className="badge__header">
-                <a href="#" >
+                <Link to="/" >
                 <img src={Logo} alt="Ted Cover Page"></img>
-                </a>
+                </Link>
             </div>
             
             <div className="badge__section-name">
