@@ -2,7 +2,7 @@ import React from 'react'
 import Badge from '../components/Badge'
 import '../styles/NewBadge.css'
 
-import BadgeForm from '../components/BadgeForm.js'
+import BadgeForm from '../components/PublicForm.js'
 class NewBadge extends React.Component{
 
     state={form:{  

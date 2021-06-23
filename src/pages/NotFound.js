@@ -8,7 +8,7 @@ export default function NotFound() {
         <div className="container__sign">
             <span className="container__sign--close">¿</span><div className="container__sign--microphone"/><span className="container__sign--close">?</span>
             </div>
-            <h1>404</h1>
+            <h1 className="container__sign--404">404</h1>
 
             </div>
         </React.Fragment>

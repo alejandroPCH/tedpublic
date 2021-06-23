@@ -30,15 +30,15 @@ class Badge extends React.Component{
                 </Link>
             </div>
             
-            <div className="badge__section-name">
+            <div className="badge__section--name">
                 <img className="badge__avatar" src={avatar} alt="Profile Logo"></img>
                 <h1>{firstName} <br/>{lastName}</h1>
             </div>
             
-            <div className="badge__section-info">
-                <h2>{jobTitle}</h2>
-                <h3>{email}</h3>
-                <div>{twitter}</div>
+            <div className="badge__section--info">
+                <h2 className="info--jobTitle">{jobTitle}</h2>
+                <h3 className="info--email">{email}</h3>
+                <div className="info--twitter">{twitter}</div>
             </div>
 
             <div className="badge__footer"><p>#Ted</p></div>

@@ -1,4 +1,4 @@
-h1 {
+.container__sign--404 {
   color: white;
   font-size: clamp(7em, 15vw, 10rem);
 }
