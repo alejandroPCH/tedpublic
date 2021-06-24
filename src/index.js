@@ -1,8 +1,6 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import NewBadge from './pages/NewAttendance'
-import BadgesList from './pages/PublicList'
 import App from'./components/App'
 
 

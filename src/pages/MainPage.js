@@ -1,11 +1,14 @@
 import React from 'react'
-import Logo from '../assets/images/ted-logo.png'
-import Attendances from '../components/Attendances'
 import {Link} from 'react-router-dom'
-import Api from '../components/ApiData'
-import '../styles/PublicList.css'
 
-export class PublicList extends React.Component{
+import Api from '../components/ApiData'
+
+import Attendances from '../components/Attendances'
+import Loading from '../components/Loading'
+
+import '../styles/MainPage.css'
+
+export class MainPage extends React.Component{
     
     
 
@@ -21,6 +24,11 @@ export class PublicList extends React.Component{
             data:undefined
          
             }
+
+            // this element is to don't make the browser load the image twice
+            this.image=<div className="background-img"></div>
+
+            
         }
 
 
@@ -30,7 +38,8 @@ export class PublicList extends React.Component{
                
         
         }
-
+        
+      
         fetchData=async()=>{
 
 
@@ -38,7 +47,8 @@ export class PublicList extends React.Component{
 
           try{
             const data=await Api.badges.list()
-            this.setState({loading:false,error:false,data:data})
+            
+            this.setState({loading:false,data:data})
 
           }catch(error){
 
@@ -48,14 +58,26 @@ export class PublicList extends React.Component{
           
         }
   
-      render() {
+
+      render(){
       
 
-      if(this.state.loading===true){
+        if(this.state.loading===true){
 
-        return "loading..."
+          return (
+  
+            <React.Fragment>
+            <Loading />
 
-      }
+            {this.image}
+            </React.Fragment>
+  
+          )
+  
+        }
+
+
+      
       if (this.state.error) {
 
       return (
@@ -63,9 +85,10 @@ export class PublicList extends React.Component{
         
         
         <React.Fragment> 
+       
         <div className="error-badge">
         <h2>Error: {this.state.error.message}</h2>
-        <h3>:(</h3>
+        <h3>:</h3>
           <br />
         <Link className="button button__primary" to="/"> 
           Return
@@ -78,31 +101,27 @@ export class PublicList extends React.Component{
         )
         
       }
+
+      //this is the main page
+    
+      return (
       
-        return (
         <React.Fragment>
-        
-          {console.log("soy el render")}
-
-          <div className="background-img"></div>
-                   
-                   
-            <div className="badges">
-                                      
-              <div className="no-style-div">                    
-                  <Attendances attendanceList={this.state.data} />
-                
-                                              
+       
+       <div className="background-img"></div>
+                  
+        <div className="badges">
+                                     
+          <div className="no-style-div">                    
+             
+             <Attendances attendanceList={this.state.data} />
               
-
-              </div>
-            
-            </div>
-
+           </div>           
+        </div>
         </React.Fragment>
 
         )
-    }
+    
 }
-
-export default PublicList
+}
+export default MainPage

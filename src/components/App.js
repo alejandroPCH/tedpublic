@@ -3,7 +3,7 @@ import { BrowserRouter,Route,Switch} from 'react-router-dom'
 
 
 import Layout from './Layout'
-import PublicList from '../pages/PublicList'
+import MainPage from '../pages/MainPage'
 import NewAttendance from '../pages/NewAttendance'
 import NotFound from '../pages/NotFound'
 
@@ -13,8 +13,9 @@ import NotFound from '../pages/NotFound'
     <BrowserRouter>
 
         <Layout>
+
         <Switch>
-            <Route exact path="/" component={PublicList} />
+            <Route exact path="/" component={MainPage} />
             <Route exact path="/new" component={NewAttendance} />
             <Route component={NotFound}/>
         </Switch> 

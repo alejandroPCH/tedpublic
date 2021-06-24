@@ -2,7 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 export class attendances extends React.Component {
     render() {
-        if(this.props.attendanceList.length==0){
+
+
+        if(this.props.attendanceList.length===0){
             
             return(
             
@@ -16,10 +18,12 @@ export class attendances extends React.Component {
                 </div>
 
                 {console.log("hdasd")}
-                </React.Fragment>)
+                </React.Fragment>
+                
+                )
             
+                
         }
-
         return (
 
             
@@ -67,8 +71,7 @@ export class attendances extends React.Component {
         </React.Fragment>
 
         )
+        }
     }
-}
-
 
 export default attendances
