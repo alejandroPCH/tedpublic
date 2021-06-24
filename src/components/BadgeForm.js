@@ -7,7 +7,6 @@ class BadgeForm extends React.Component{
   
     handleSummit=(e)=>{
 
-        console.log("El botón fue presionado")
 
         e.preventDefault()    
 

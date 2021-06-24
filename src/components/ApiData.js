@@ -30,9 +30,9 @@ const api = {
         // hey, if you're seeing this, try to uncomment one of these and see what happen :D
 
         // return []
-        throw new Error("Oh gosh, we don't know what's happening")
+        // throw new Error("Oh gosh, we don't know what's happening")
 
-        // return callApi('/badges');
+        return callApi('/badges');
     },
     create(badge) {
       return callApi(`/badges`, {
