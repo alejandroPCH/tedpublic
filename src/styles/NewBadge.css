@@ -27,6 +27,17 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+  .badge__section--name {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 40vh;
+    text-align: center;
+  }
+  .badge__avatar {
+    margin: 20px 0;
+  }
   .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

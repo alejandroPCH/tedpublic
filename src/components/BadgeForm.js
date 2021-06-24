@@ -7,8 +7,15 @@ class BadgeForm extends React.Component{
   
     handleSummit=(e)=>{
 
-
+        
         e.preventDefault()    
+
+        console.log(this.props.data.firstName)
+        console.log(this.props.data.lastName)
+        console.log(this.props.data.jobTitle)
+        console.log(this.props.data.email)
+        console.log(this.props.data.twitter)
+
 
     }
 

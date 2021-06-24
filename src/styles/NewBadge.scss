@@ -21,7 +21,17 @@ body{
 
 
 @media screen and (max-width: $min-width) {
-    
+    .badge__section--name{
+        flex-direction: column;
+
+        min-height: 40vh;
+        text-align: center;
+    }
+    .badge__avatar{
+
+        margin:20px 0;
+
+    }
     .row{
         flex-direction: column;
 }
