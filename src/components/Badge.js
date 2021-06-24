@@ -4,8 +4,8 @@ import '../global.css'
 import '../styles/Badge.css'
 import Logo from '../assets/images/ted-logo.png'
 import {Link} from 'react-router-dom'
-// // npm packages don't use an explicit path
-// import 'bootstrap/dist/css/bootstrap.css'
+
+
 
 class Badge extends React.Component{
 
@@ -38,7 +38,7 @@ class Badge extends React.Component{
             <div className="badge__section--info">
                 <h2 className="info--jobTitle">{jobTitle}</h2>
                 <h3 className="info--email">{email}</h3>
-                <div className="info--twitter">{twitter}</div>
+                <div className="info--twitter">@{twitter}</div>
             </div>
 
             <div className="badge__footer"><p>#Ted</p></div>

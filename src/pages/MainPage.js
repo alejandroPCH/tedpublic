@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import Api from '../components/ApiData'
 
 import Attendances from '../components/Attendances'
+import FatalError from '../components/FatalError'
 import Loading from '../components/Loading'
 
 import '../styles/MainPage.css'
@@ -61,8 +62,15 @@ export class MainPage extends React.Component{
 
       render(){
       
+        // if there is an error that have no solution
+        if (this.state.error) {
 
-        if(this.state.loading===true){
+          return <FatalError error={this.state.error.message}/>
+            
+          }
+    
+      //when fetchData is bringing the information
+       if(this.state.loading){
 
           return (
   
@@ -76,31 +84,7 @@ export class MainPage extends React.Component{
   
         }
 
-
       
-      if (this.state.error) {
-
-      return (
-        
-        
-        
-        <React.Fragment> 
-       
-        <div className="error-badge">
-        <h2>Error: {this.state.error.message}</h2>
-        <h3>:</h3>
-          <br />
-        <Link className="button button__primary" to="/"> 
-          Return
-        </Link>
-        </div>
-        
-        {console.log("hdasd")}
-        
-          </React.Fragment>
-        )
-        
-      }
 
       //this is the main page
     
