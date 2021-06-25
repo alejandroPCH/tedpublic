@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 export class NoPublic extends Component {
     
     render() {
+        
         return (
                  <div className="error-badge">
                 <h3>We couldn't find anyone :(</h3>

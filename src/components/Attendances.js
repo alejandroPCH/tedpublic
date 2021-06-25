@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import me from '../assets/images/me.jpg'
 import NoPublic from './NoPublic'
 export class attendances extends React.Component {
+
 
 
     render() {
@@ -10,8 +12,9 @@ export class attendances extends React.Component {
         
      return <NoPublic />
 
-    }
-
+    }  
+   
+let hola
      return (
 
       <React.Fragment>
@@ -21,10 +24,18 @@ export class attendances extends React.Component {
         {this.props.attendanceList.map((person)=>{
                 // map is a function, so it return something
 
+                console.log(person.avatarUrl)
+                if (person.avatarUrl==="6bc16b40952ca1cf49877a510db07b3d") {
+    
+                  hola=me
+                }else{
+                  hola=person.avatarUrl
+                }            
+
             return(       //key is an indentifier,
             
                 <li key={person.id}className="attendance">
-                    <img src={person.avatarUrl} alt="" className="attendance__avatar"/>
+                    <img src={hola} alt="" className="attendance__avatar"/>
                     
                     <div className="no-style-div">
                         

@@ -4,6 +4,9 @@ import '../styles/NewBadge.css'
 import Md5 from 'md5'
 import BadgeForm from '../components/BadgeForm.js'
 import me from '../assets/images/me.jpg'
+import Api from '../components/ApiData'
+
+
 class NewBadge extends React.Component{
 
     state={form:{  
@@ -13,6 +16,7 @@ class NewBadge extends React.Component{
         email:'',
         jobTitle:'',
         twitter:'',
+        avatarUrl:''
     }}
 
     handleChange=e=>{
@@ -31,6 +35,35 @@ class NewBadge extends React.Component{
 
     }
 
+    handleSummit=async e=>{
+
+        e.preventDefault()
+        
+    console.log(this.state.form)
+
+        // const name= await this.state.form.firstName
+        // const lastName= await this.state.form.lastName
+        // const jobTitle= await this.state.form.jobTitle
+        // const email= await this.state.form.email
+        // const twitter= await this.state.form.twitter
+        
+    
+        this.setState({loading:true,error:null})
+
+        try {
+            
+            await Api.badges.create(this.state.form)
+
+            this.setState({loading:false})
+
+        } catch (error) {
+            
+            this.setState({loading:false,error:error})
+
+        }
+
+        }
+
     
     render(){
         
@@ -42,6 +75,7 @@ class NewBadge extends React.Component{
         if(email=='')hash="6bc16b40952ca1cf49877a510db07b3d"
         else hash=Md5(email)
 
+        this.state.form.avatarUrl=hash
 
 
 
@@ -67,10 +101,11 @@ class NewBadge extends React.Component{
         
                        
                         avatar={
-                       
+
+                            
                             
                         // i don't use my gravatar hash on the url because of the low quality of my photo, check it out if you want to see it anyways https://www.gravatar.com/avatar/6bc16b40952ca1cf49877a510db07b3d?d=identicon`
-                            hash=="6bc16b40952ca1cf49877a510db07b3d"? `${me}` :`https://www.gravatar.com/avatar/${hash}?d=identicon` 
+                        hash=="6bc16b40952ca1cf49877a510db07b3d"? `${me}` :`https://www.gravatar.com/avatar/${hash}?d=identicon` 
                         
                         }
                         />
@@ -79,7 +114,7 @@ class NewBadge extends React.Component{
                         </div>
                         <div className="form__column column">
 
-                        <BadgeForm onChange={this.handleChange} data={this.state.form}/>
+                        <BadgeForm onSummit={this.handleSummit} onChange={this.handleChange} data={this.state.form}/>
 
                         </div>
                     </div>

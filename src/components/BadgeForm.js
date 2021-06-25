@@ -5,21 +5,6 @@ import '../styles/BadgeForm.css'
 class BadgeForm extends React.Component{
 
   
-    handleSummit=(e)=>{
-
-        
-        e.preventDefault()    
-
-        console.log(this.props.data.firstName)
-        console.log(this.props.data.lastName)
-        console.log(this.props.data.jobTitle)
-        console.log(this.props.data.email)
-        console.log(this.props.data.twitter)
-
-
-    }
-
-
     // handleChange=(e)=>{
         
         
@@ -36,7 +21,7 @@ class BadgeForm extends React.Component{
 
         return(<>
 
-            <form className="container__form" onSubmit={this.handleSummit} action="">
+            <form className="container__form" action="" onSubmit={this.props.onSummit}>
             <h1>New Attendant</h1>
 
                 <div className="form firstName">
@@ -81,7 +66,7 @@ class BadgeForm extends React.Component{
                     
                 </div>
 
-                <button onClick={this.handleClick} className="button__primary button">Save</button>
+                <button className="button__primary button">Save</button>
             </form>
         </>
         )
