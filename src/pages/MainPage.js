@@ -27,7 +27,7 @@ export class MainPage extends React.Component{
             }
 
             // this element is to don't make the browser load the image twice
-            this.image=<div className="background-img"></div>
+            this.MainImage=<div className="background-img"></div>
 
             
         }
@@ -77,7 +77,7 @@ export class MainPage extends React.Component{
             <React.Fragment>
             <Loading />
 
-            {this.image}
+            {this.MainImage}
             </React.Fragment>
   
           )

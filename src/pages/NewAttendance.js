@@ -6,11 +6,15 @@ import BadgeForm from '../components/BadgeForm.js'
 import me from '../assets/images/me.jpg'
 import Api from '../components/ApiData'
 
+import Loading from '../components/Loading'
 
 class NewBadge extends React.Component{
 
-    state={form:{  
-
+    state={
+        loading:false,
+        error:null,
+        
+        form:{  
         firstName:'',
         lastName:'',
         email:'',
@@ -39,7 +43,7 @@ class NewBadge extends React.Component{
 
         e.preventDefault()
         
-    console.log(this.state.form)
+        console.log(this.state.form)
 
         // const name= await this.state.form.firstName
         // const lastName= await this.state.form.lastName
@@ -49,7 +53,6 @@ class NewBadge extends React.Component{
         
     
         this.setState({loading:true,error:null})
-
         try {
             
             await Api.badges.create(this.state.form)
@@ -67,6 +70,8 @@ class NewBadge extends React.Component{
     
     render(){
         
+        if(this.state.loading)return(<Loading/>)
+
         const email=this.state.form.email
         let hash=0
 
@@ -96,13 +101,9 @@ class NewBadge extends React.Component{
                         email={this.state.form.email||"alejandropachas1@gmail.com"}
                         jobTitle={this.state.form.jobTitle||"Frontend Developer"}
                         twitter={this.state.form.twitter||"alejantropper"}
-
-
-        
-                       
+                      
                         avatar={
-
-                            
+   
                             
                         // i don't use my gravatar hash on the url because of the low quality of my photo, check it out if you want to see it anyways https://www.gravatar.com/avatar/6bc16b40952ca1cf49877a510db07b3d?d=identicon`
                         hash=="6bc16b40952ca1cf49877a510db07b3d"? `${me}` :`https://www.gravatar.com/avatar/${hash}?d=identicon` 

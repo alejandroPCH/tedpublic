@@ -1,22 +1,13 @@
 {
   "badges": [
     {
-      "id": "40fc-a41f-05e62b5939-a72de30c42-9deb",
-      "firstName": "Guillemo",
-      "lastName": "Grady",
-      "email": "Leann_Berge@gmail.com",
-      "jobTitle": "Senior Software Engineer",
-      "twitter": "GuillermoTropper",
-      "avatarUrl": "https://www.gravatar.com/avatar/f63a9c45aca0e7e7de0782a6b1dff40b?d=identicon"
-    },
-    {
-      "firstName": "Richard",
-      "lastName": "Kaufman López",
-      "email": "richardbkaufman@gmail.com",
-      "avatarUrl": "https://www.gravatar.com/avatar/21594ed15d68ace3965642162f8d2e84?d=identicon",
+      "firstName": "Alejandro",
+      "lastName": "Pachas",
+      "email": "alejandropachas1@gmail.com",
       "jobTitle": "Frontend Engineer",
-      "twitter": "sparragus",
-      "id": "EYR2BVQ"
+      "twitter": "alejantropper",
+      "avatarUrl": "6bc16b40952ca1cf49877a510db07b3d",
+      "id": "ZdUfm-7"
     },
     {
       "id": "d00d3614-101a-44ca-b6c2-0be075aeed3d",
@@ -37,13 +28,31 @@
       "avatarUrl": "https://www.gravatar.com/avatar/e74e87d40e55b9ff9791c78892e55cb7?d=identicon"
     },
     {
-      "firstName": "Alejandro",
-      "lastName": "Pachas",
+      "firstName": "alejandro",
+      "lastName": "pachas",
       "email": "alejandropachas1@gmail.com",
-      "jobTitle": "Frontend Developer",
-      "twitter": "alejantropper",
+      "jobTitle": "engineer",
+      "twitter": "",
       "avatarUrl": "6bc16b40952ca1cf49877a510db07b3d",
-      "id": "ZdUfm-7"
+      "id": "nrgDdDg"
+    },
+    {
+      "firstName": "alejandro",
+      "lastName": "pachas",
+      "email": "alejandropachas1@gmail.com",
+      "jobTitle": "engineer",
+      "twitter": "@alejantropper",
+      "avatarUrl": "6bc16b40952ca1cf49877a510db07b3d",
+      "id": "w2T5c7c"
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "jobTitle": "",
+      "twitter": "",
+      "avatarUrl": "6bc16b40952ca1cf49877a510db07b3d",
+      "id": "LNCyicV"
     }
   ]
 }
