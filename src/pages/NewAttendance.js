@@ -57,6 +57,7 @@ class NewBadge extends React.Component{
             
             await Api.badges.create(this.state.form)
 
+            this.props.history.push('/')
             this.setState({loading:false})
 
         } catch (error) {
@@ -70,7 +71,7 @@ class NewBadge extends React.Component{
     
     render(){
         
-        if(this.state.loading)return(<Loading/>)
+        if(this.state.loading)return<Loading/>
 
         const email=this.state.form.email
         let hash=0
@@ -99,7 +100,7 @@ class NewBadge extends React.Component{
                         firstName={this.state.form.firstName||"Alejandro"}
                         lastName={this.state.form.lastName||"Pachas"}
                         email={this.state.form.email||"alejandropachas1@gmail.com"}
-                        jobTitle={this.state.form.jobTitle||"Frontend Developer"}
+                        jobTitle={this.state.form.jobTitle||"Frontend Engineer"}
                         twitter={this.state.form.twitter||"alejantropper"}
                       
                         avatar={
@@ -115,7 +116,7 @@ class NewBadge extends React.Component{
                         </div>
                         <div className="form__column column">
 
-                        <BadgeForm onSummit={this.handleSummit} onChange={this.handleChange} data={this.state.form}/>
+                        <BadgeForm onSummit={this.handleSummit} onChange={this.handleChange} data={this.state.form} error={this.state.error}/>
 
                         </div>
                     </div>

@@ -35,6 +35,10 @@ const api = {
         return callApi('/badges');
     },
     create(badge) {
+
+      //un comment this and see what happen :D
+      // throw new Error("Your form wasn't summited, sorry my friend")
+
       return callApi(`/badges`, {
         method: 'POST',
         body: JSON.stringify(badge),

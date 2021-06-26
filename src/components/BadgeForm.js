@@ -16,6 +16,8 @@ class BadgeForm extends React.Component{
     //     })
 
     // }
+
+
   
     render(){
 
@@ -67,6 +69,13 @@ class BadgeForm extends React.Component{
                 </div>
 
                 <button className="button__primary button">Save</button>
+               
+                {this.props.error && 
+
+                <div className="error-form">
+                    <p className="error-form--red">Error: <span className="error-form--white">{this.props.error.message} 😭</span></p>
+
+                </div>}
             </form>
         </>
         )

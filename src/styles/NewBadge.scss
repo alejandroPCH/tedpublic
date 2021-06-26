@@ -4,6 +4,8 @@ body{
 }
 
 .row{
+    width: 100vw;
+
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
