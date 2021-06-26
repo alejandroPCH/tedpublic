@@ -1,13 +1,13 @@
 {
   "badges": [
     {
+      "id": "ZdUfm-7",
       "firstName": "Alejandro",
       "lastName": "Pachas",
       "email": "alejandropachas1@gmail.com",
       "jobTitle": "Frontend Engineer",
       "twitter": "alejantropper",
-      "avatarUrl": "6bc16b40952ca1cf49877a510db07b3d",
-      "id": "ZdUfm-7"
+      "avatarUrl": "6bc16b40952ca1cf49877a510db07b3d"
     },
     {
       "id": "d00d3614-101a-44ca-b6c2-0be075aeed3d",
@@ -26,15 +26,7 @@
       "jobTitle": "National Markets Officer",
       "twitter": "DaphneyTorphy96105",
       "avatarUrl": "https://www.gravatar.com/avatar/e74e87d40e55b9ff9791c78892e55cb7?d=identicon"
-    },
-    {
-      "firstName": "alejandro",
-      "lastName": "pachas",
-      "email": "alejandropachas1@gmail.com",
-      "jobTitle": "engineer",
-      "twitter": "@alejantropper",
-      "avatarUrl": "6bc16b40952ca1cf49877a510db07b3d",
-      "id": "pcQjZqb"
     }
+    
   ]
 }

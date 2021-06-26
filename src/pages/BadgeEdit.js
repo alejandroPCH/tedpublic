@@ -7,11 +7,12 @@ import me from '../assets/images/me.jpg'
 import Api from '../components/ApiData'
 
 import Loading from '../components/Loading'
+import api from '../components/ApiData'
 
-class NewBadge extends React.Component{
+class BadgeEdit extends React.Component{
 
     state={
-        loading:false,
+        loading:true,
         error:null,
         
         form:{  
@@ -36,6 +37,28 @@ class NewBadge extends React.Component{
             }
 
         })
+
+    }
+
+    componentDidMount(){
+        
+        this.fetchData()
+    }
+
+    async fetchData(e){
+
+        this.setState({loading:true,error:null})
+
+        try{
+
+            const data=await api.badges.read(this.props.match.params.badgeId)
+            this.setState({loading:false, form:data})
+
+        }catch(error){
+
+            this.setState({loading:false, error:error})
+
+        }
 
     }
 
@@ -134,4 +157,4 @@ class NewBadge extends React.Component{
 
 }
 
-export default NewBadge
+export default BadgeEdit

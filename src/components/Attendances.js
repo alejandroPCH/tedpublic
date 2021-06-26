@@ -2,6 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import me from '../assets/images/me.jpg'
 import NoPublic from './NoPublic'
+
+import BadgeItem from './BadgeItem'
+
 export class attendances extends React.Component {
 
 
@@ -14,7 +17,7 @@ export class attendances extends React.Component {
 
     }  
    
-let hola
+    let Photo=''
      return (
 
       <React.Fragment>
@@ -27,33 +30,24 @@ let hola
                 console.log(person.avatarUrl)
                 if (person.avatarUrl==="6bc16b40952ca1cf49877a510db07b3d") {
     
-                  hola=me
+                  Photo=me
                 }else{
-                  hola=person.avatarUrl
+                  Photo=person.avatarUrl
                 }            
 
-            return(       //key is an indentifier,
-            
-                <li key={person.id}className="attendance">
-                    <img src={hola} alt="" className="attendance__avatar"/>
-                    
-                    <div className="no-style-div">
-                        
-                        <strong>{person.firstName} {person.lastName}</strong>
-                        
-                        <div className="attendance__twitter">
-                        
-                            <span className="attendance__twitter--logo"></span>@{person.twitter}
-                        
-                        </div>
+            return(       
+                
+                
+                <li key={person.id}>
+              <Link to={`/${person.id}/edit` } className="attendance">
 
-                        <p>{person.jobTitle}</p>
-
-                    </div>
+              <BadgeItem badgeValue={person} profilePhoto={Photo}/>
+               
+              </Link>
 
                 </li>      
 
-                )
+            )
 
             })
         }
@@ -61,6 +55,7 @@ let hola
           <div className="badges__buttons">
             <Link to="/new" className="button button__primary">
              New Attendance
+
             </Link>
                 
           </div>

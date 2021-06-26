@@ -24,7 +24,6 @@ class BadgeForm extends React.Component{
         return(<>
 
             <form className="container__form" action="" onSubmit={this.props.onSummit}>
-            <h1>New Attendant</h1>
 
                 <div className="form firstName">
                 
