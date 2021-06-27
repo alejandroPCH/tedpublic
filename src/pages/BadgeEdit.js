@@ -78,10 +78,11 @@ class BadgeEdit extends React.Component{
         this.setState({loading:true,error:null})
         try {
             
+                                    //remember that badges.update recieve 2 parameter
             await Api.badges.update(this.props.match.params.badgeId,this.state.form)
-
-            this.props.history.push('/')
             this.setState({loading:false})
+            this.props.history.push('/')
+
 
         } catch (error) {
             
@@ -89,7 +90,7 @@ class BadgeEdit extends React.Component{
 
         }
 
-        }
+    }
 
     
     render(){
