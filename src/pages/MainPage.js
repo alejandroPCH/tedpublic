@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-import Api from '../components/ApiData'
+import api from '../components/ApiData'
 
 import Attendances from '../components/Attendances'
 import FatalError from '../components/FatalError'
@@ -47,7 +47,7 @@ export class MainPage extends React.Component{
           this.setState({loading:true,error:null})
 
           try{
-            const data=await Api.badges.list()
+            const data=await api.badges.list()
             
             this.setState({loading:false,data:data})
 

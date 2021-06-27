@@ -7,6 +7,7 @@ import MainPage from '../pages/MainPage'
 import NewAttendance from '../pages/NewAttendance'
 import NotFound from '../pages/NotFound'
 import BadgeEdit from '../pages/BadgeEdit'
+import BadgeDetails from '../pages/BadgeDetails'
  function App(){
     return (
     
@@ -17,6 +18,7 @@ import BadgeEdit from '../pages/BadgeEdit'
         <Switch>
             <Route exact path="/" component={MainPage} />
             <Route exact path="/new" component={NewAttendance} />
+            <Route exact path="/:badgeId" component={BadgeDetails} />
             <Route exact path="/:badgeId/edit" component={BadgeEdit} />
             <Route component={NotFound}/>
         </Switch> 

@@ -39,7 +39,7 @@ export class attendances extends React.Component {
                 
                 
                 <li key={person.id}>
-              <Link to={`/${person.id}/edit` } className="attendance">
+              <Link to={`/${person.id}/` } className="attendance">
 
               <BadgeItem badgeValue={person} profilePhoto={Photo}/>
                

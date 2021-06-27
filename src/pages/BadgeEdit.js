@@ -4,10 +4,10 @@ import '../styles/New-Edit-Badge.css'
 import Md5 from 'md5'
 import BadgeForm from '../components/BadgeForm.js'
 import me from '../assets/images/me.jpg'
-import Api from '../components/ApiData'
+import api from '../components/ApiData'
 
 import Loading from '../components/Loading'
-import api from '../components/ApiData'
+import FatalError from '../components/FatalError'
 
 class BadgeEdit extends React.Component{
 
@@ -79,7 +79,7 @@ class BadgeEdit extends React.Component{
         try {
             
                                     //remember that badges.update recieve 2 parameter
-            await Api.badges.update(this.props.match.params.badgeId,this.state.form)
+            await api.badges.update(this.props.match.params.badgeId,this.state.form)
             this.setState({loading:false})
             this.props.history.push('/')
 
@@ -96,7 +96,7 @@ class BadgeEdit extends React.Component{
     render(){
         
         if(this.state.loading)return<Loading/>
-
+        if(this.state.error)return <FatalError error={this.state.error}/>
         const email=this.state.form.email
         let hash=0
 
