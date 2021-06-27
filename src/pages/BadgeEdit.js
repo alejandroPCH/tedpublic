@@ -78,7 +78,7 @@ class BadgeEdit extends React.Component{
         this.setState({loading:true,error:null})
         try {
             
-            await Api.badges.create(this.state.form)
+            await Api.badges.update(this.props.match.params.badgeId,this.state.form)
 
             this.props.history.push('/')
             this.setState({loading:false})
@@ -138,7 +138,7 @@ class BadgeEdit extends React.Component{
 
                         </div>
                         <div className="form__column column">
-                        <h1>New Attendant</h1>
+                        <h1>Edit Attendant</h1>
 
                         <BadgeForm onSummit={this.handleSummit} onChange={this.handleChange} data={this.state.form} error={this.state.error}/>
 
