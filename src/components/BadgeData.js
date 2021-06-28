@@ -27,10 +27,10 @@ export class BadgeData extends Component {
                 </ul>
            
            <div>
-                <div>
+                <div className="edit">
 
 
-                    <Link className="button__primary button" to={`/${person.id}/edit`}>Edit Badge</Link>
+                    <Link className="button__primary button edit--button" to={`/${person.id}/edit`}>Edit Badge</Link>
             
                 </div>
 
@@ -39,9 +39,10 @@ export class BadgeData extends Component {
 
                     <p>Do you want to delete your Badge? <a onClick={this.modal} className="button-danger">Delete Badge</a></p>
                     {
+
+                        //.createPortal receive 2 parameters, what and where
                         ReactDOM.createPortal(
-                            <h1>Hello buddy :)</h1>,
-                            document.getElementById('modal')
+                            <h1>Hello buddy :)</h1>, document.getElementById('modal')
                         )
                     }
 

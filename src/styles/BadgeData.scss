@@ -3,6 +3,16 @@ $min-width:800px;
 .badge-data--h1{
     align-self: center;
 }
+.edit{
+
+    display: flex;
+    justify-content: center;
+}
+.edit--button{
+    width: 70%; 
+    align-items: center;
+    justify-content: center;
+}
 .values{
     background-color: black;
     position: relative;
