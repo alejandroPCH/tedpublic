@@ -26,7 +26,7 @@ export class MainPage extends React.Component{
          
             }
 
-            // this element is to don't make the browser load the image twice
+            // this element is to don't make the browser load this image twice
             this.MainImage=<div className="background-img"></div>
 
             

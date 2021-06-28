@@ -1,6 +1,6 @@
 import React from 'react'
 import Badge from '../components/Badge'
-import '../styles/New-Edit-Badge.css'
+import '../styles/New-Edit-Details-Badge.css'
 import Md5 from 'md5'
 import BadgeForm from '../components/BadgeForm.js'
 import me from '../assets/images/me.jpg'
@@ -71,9 +71,11 @@ class NewBadge extends React.Component{
     
     render(){
         
+        const form=this.state.form
+
         if(this.state.loading)return<Loading/>
 
-        const email=this.state.form.email
+        const email=form.email
         let hash=0
 
         
@@ -81,7 +83,7 @@ class NewBadge extends React.Component{
         if(email=='')hash="6bc16b40952ca1cf49877a510db07b3d"
         else hash=Md5(email)
 
-        this.state.form.avatarUrl=hash
+        form.avatarUrl=hash
 
 
 
@@ -97,11 +99,11 @@ class NewBadge extends React.Component{
                         <div className="badge__column column">
 
                         <Badge 
-                        firstName={this.state.form.firstName||"Alejandro"}
-                        lastName={this.state.form.lastName||"Pachas"}
-                        email={this.state.form.email||"alejandropachas1@gmail.com"}
-                        jobTitle={this.state.form.jobTitle||"Frontend Engineer"}
-                        twitter={this.state.form.twitter||"alejantropper"}
+                        firstName={form.firstName||"Alejandro"}
+                        lastName={form.lastName||"Pachas"}
+                        email={form.email||"alejandropachas1@gmail.com"}
+                        jobTitle={form.jobTitle||"Frontend Engineer"}
+                        twitter={form.twitter||"alejantropper"}
                       
                         avatar={
    

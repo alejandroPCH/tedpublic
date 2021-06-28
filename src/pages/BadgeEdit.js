@@ -1,6 +1,6 @@
 import React from 'react'
 import Badge from '../components/Badge'
-import '../styles/New-Edit-Badge.css'
+import '../styles/New-Edit-Details-Badge.css'
 import Md5 from 'md5'
 import BadgeForm from '../components/BadgeForm.js'
 import me from '../assets/images/me.jpg'
