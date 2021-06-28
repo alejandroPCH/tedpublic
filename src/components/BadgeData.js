@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import ReactDOM from 'react-dom'
 
 import {Link} from 'react-router-dom'
 import '../styles/BadgeData.css'
@@ -25,21 +25,30 @@ export class BadgeData extends Component {
 
 
                 </ul>
-            <div>
-
-
-                <Link className="button__primary button" to={`/${person.id}/edit`}>Edit Badge</Link>
            
+           <div>
+                <div>
+
+
+                    <Link className="button__primary button" to={`/${person.id}/edit`}>Edit Badge</Link>
+            
+                </div>
+
+                <div>
+
+
+                    <p>Do you want to delete your Badge? <a onClick={this.modal} className="button-danger">Delete Badge</a></p>
+                    {
+                        ReactDOM.createPortal(
+                            <h1>Hello buddy :)</h1>,
+                            document.getElementById('modal')
+                        )
+                    }
+
+            
+                </div>
+
             </div>
-
-            <div>
-
-
-                <p>Do you want to delete your Badge? <Link to={`/`} className="button-danger">Delete Badge</Link></p>
-           
-            </div>
-
-
             </React.Fragment>
         )
     }
