@@ -1,0 +1,48 @@
+$min-width:800px;
+
+.badge-data--h1{
+    align-self: center;
+}
+.values{
+    background-color: black;
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    padding: 0 100px;
+    padding-bottom:50px; 
+  
+    &__item {
+        font-weight: 500;
+        font-size:  clamp(1rem,1.5vw,2.9rem);
+        margin-top:5vh ;
+        white-space: nowrap;
+        &--info{
+            margin-left: 10px;
+            font-weight: 700;
+            font-size: clamp(1rem,1.5vw,3rem);
+
+        }
+    }
+   
+    }
+    @media screen and (max-width: $min-width) {
+
+        .values{
+            align-items: center;
+            justify-content: center;
+            min-width: 100vw;
+            padding: 0;
+            margin-top: 200px;
+            padding-bottom:50px; 
+            &__item--info{
+                margin-left: 10px;
+                font-weight: 700;
+                font-size: clamp(1.1rem,1.5vw,3rem);
+        
+            }
+        }
+
+    }

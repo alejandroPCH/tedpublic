@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Badge from '../components/Badge'
 import '../styles/New-Edit-Details-Badge.css'
 
+import BadgeData from '../components/BadgeData'
+
 import Md5 from 'md5'
 import api from '../components/ApiData'
 import Loading from '../components/Loading'
@@ -91,9 +93,8 @@ export class BadgeDetails extends Component {
 
                         </div>
                         <div className="form__column column">
-                        <h1>{person.firstName} {person.lastName}</h1>
 
-                    
+                        <BadgeData person={person}/>
 
                         </div>
                     </div>
