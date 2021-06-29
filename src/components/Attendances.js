@@ -5,30 +5,72 @@ import NoPublic from './NoPublic'
 
 import BadgeItem from './BadgeItem'
 
-export class attendances extends React.Component {
+function Attendances(props){
+
+  const personArray=props.attendanceList
 
 
+  let Photo=''
+  const [name , setName]=React.useState('')
+  
 
-    render() {
+console.log(personArray)
+  // personArray.fitler is going to bring the badges that match with the word  
+  const filteredArray=personArray.filter(badge=>{
+                              //badge is just a named that i add, but it can be anyone
 
-    if(this.props.attendanceList.length===0){        
+    //and here, all badges that match are going to be returned
+      // no matter if is the first name or the last name
+    return `${badge.firstName} ${badge.lastName}`.toLowerCase().includes(name.toLowerCase())
+                                          // the name and what the user typed needs to be in lower case
+  })
+
+    if(filteredArray.length===0){        
         
-     return <NoPublic />
+      
+     return(
+      <React.Fragment>
+
+      <div className="filter">
+      
+            <label>Filter Badges</label>
+  
+            <input type="text" className="filter__box"
+                    value={name} onChange={(e)=>{
+                      setName(e.target.value)}}></input>
+      
+          </div>
+           
+      <NoPublic />
+      </React.Fragment>
+      )
 
     }  
-   
-    let Photo=''
-     return (
+
+    return (
 
       <React.Fragment>
+        <div className="badges__buttons">
+            <Link to="/new" className="button button--primary">
+             New Attendance
+            </Link>
+                
+          </div>
            
         <ul className="list-unstyled">
-
-        {this.props.attendanceList.map((person)=>{
-          
+          <div className="filter">
+      
+            <label>Filter Badges</label>
+  
+            <input type="text" className="filter__box"
+                    value={name} onChange={(e)=>{
+                      setName(e.target.value)}}></input>
+      
+          </div>
+            {filteredArray.map((person)=>{
+            
                 // map is a function, so it return something
 
-                console.log(person.avatarUrl)
                 if (person.avatarUrl==="6bc16b40952ca1cf49877a510db07b3d") {
     
                   Photo=me
@@ -56,18 +98,11 @@ export class attendances extends React.Component {
             })
         }
 
-          <div className="badges__buttons">
-            <Link to="/new" className="button button--primary">
-             New Attendance
-
-            </Link>
-                
-          </div>
+        
         </ul>
       </React.Fragment>
 
         )
-    }
 }
 
-export default attendances
+export default Attendances
