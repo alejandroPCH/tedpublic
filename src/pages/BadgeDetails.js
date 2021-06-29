@@ -18,9 +18,42 @@ export class BadgeDetails extends Component {
         loading:true,
         error:null,
         data:undefined,
+        modalIsOpen:false,
+
     }
 
 
+
+    handleOpen=e=>{
+        this.setState({modalIsOpen:true})
+
+    }
+
+    handleClose=e=>{
+        this.setState({modalIsOpen:false})
+
+    }
+    
+    handleDeleteBadge=async e=>{
+        console.log(this.props.match.params.badgeId)
+        this.setState({loading:true, error:null})
+
+        try {
+            
+            await api.badges.remove(this.props.match.params.badgeId)
+
+            this.setState({loading:false})
+
+            this.props.history.push('/')
+
+
+        } catch (error) {
+
+            this.setState({loading:false,error:error})
+            
+        }
+
+    }
 
     componentDidMount(){
 
@@ -48,20 +81,20 @@ export class BadgeDetails extends Component {
 
 
     render() {
-        const person=this.state.data
-
+       
         if(this.state.loading)return<Loading/>
         if(this.state.error)return <FatalError error={this.state.error}/>
         
+        const person=this.state.data
         const email=person.email
         let hash=0
 
-        
+       
+
         // if the email box is empty... my photo will load
         if(email=='')hash="6bc16b40952ca1cf49877a510db07b3d"
         else hash=Md5(email)
 
-      person.avatarUrl=hash
 
         return (
             <div>
@@ -70,7 +103,6 @@ export class BadgeDetails extends Component {
                 <div className="container">
                     <div className="row">
                         
-            {console.log(this.props.match.params.badgeId)}
                     
 
                         <div className="badge__column column">
@@ -95,7 +127,13 @@ export class BadgeDetails extends Component {
                         </div>
                         <div className="form__column column">
 
-                        <BadgeData person={person}/>
+                        <BadgeData 
+                            person={person}
+                            handleOpen={this.handleOpen}
+                            handleClose={this.handleClose}
+                            modalIsOpen={this.state.modalIsOpen}
+                            handleDeleteBadge={this.handleDeleteBadge}
+                        />
 
                         </div>
                     </div>

@@ -6,7 +6,7 @@ import App from'./components/App'
 
 const container = document.getElementById('app');
 
-// ReactDOM.render(__qué__, __dónde__);
+// ReactDOM.render(__what__, __where__);
 // ReactDOM.render(<Badge />, container);
 
 ReactDOM.render(<App />,container)

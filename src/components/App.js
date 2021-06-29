@@ -18,9 +18,12 @@ import BadgeDetails from '../pages/BadgeDetails'
             <Switch>
                 <Route exact path="/" component={MainPage} />
                 <Route exact path="/new" component={NewAttendance} />
+
                 <Route exact path="/:badgeId" component={BadgeDetails} />
+
                 <Route exact path="/:badgeId/edit" component={BadgeEdit} />
                 <Route component={NotFound}/>
+
             </Switch> 
             
         </Layout>

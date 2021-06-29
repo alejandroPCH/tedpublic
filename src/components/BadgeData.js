@@ -3,50 +3,12 @@ import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import '../styles/BadgeData.css'
 import DeleteBadgeFromModal from './DeleteBadgeFromModal'
-import api from './ApiData'
-export class BadgeData extends Component {
+export function BadgeData(props){
     
-    state={
 
-        modalIsOpen:false,
+   
 
-
-    }
-
-
-    handleOpen=e=>{
-        this.setState({modalIsOpen:true})
-
-    }
-
-    handleClose=e=>{
-        this.setState({modalIsOpen:false})
-
-    }
-    
-    handleDeleteBadge=async e=>{
-
-        this.setState({loading:true, error:null})
-
-        try {
-            
-            await api.badges.remove(this.props.person.id)
-            this.props.history.push('/')
-
-
-
-
-
-        } catch (error) {
-
-            this.setState({loading:false,error:error})
-            
-        }
-    }
-
-    render() {
-
-        const person=this.props.person
+        const person=props.person
 
         return (
             <React.Fragment>
@@ -75,9 +37,9 @@ export class BadgeData extends Component {
                 <div>
 
 
-                    <p>Do you want to delete your Badge? <a className="button-danger" onClick={this.handleOpen}>Delete Badge</a></p>
+                    <p>Do you want to delete your Badge? <a className="button-danger" onClick={props.handleOpen}>Delete Badge</a></p>
 
-                   <DeleteBadgeFromModal modalIsOpen={this.state.modalIsOpen} isClose={this.handleClose} onDeleteBadge={this.handleDeleteBadge}/>
+                   <DeleteBadgeFromModal modalIsOpen={props.modalIsOpen} isClose={props.handleClose} handleDeleteBadge={props.handleDeleteBadge}/>
               
 
             
@@ -87,6 +49,5 @@ export class BadgeData extends Component {
             </React.Fragment>
         )
     }
-}
 
 export default BadgeData

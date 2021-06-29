@@ -80,6 +80,7 @@ class BadgeEdit extends React.Component{
                                     //remember that badges.update recieve 2 parameter
             await api.badges.update(this.props.match.params.badgeId,this.state.form)
             this.setState({loading:false})
+           
             this.props.history.push('/')
 
 

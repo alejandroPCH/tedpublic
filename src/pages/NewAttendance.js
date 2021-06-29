@@ -4,7 +4,7 @@ import '../styles/New-Edit-Details-Badge.css'
 import Md5 from 'md5'
 import BadgeForm from '../components/BadgeForm.js'
 import me from '../assets/images/me.jpg'
-import Api from '../components/ApiData'
+import api from '../components/ApiData'
 
 import Loading from '../components/Loading'
 
@@ -60,10 +60,10 @@ class NewBadge extends React.Component{
         this.setState({loading:true,error:null})
         try {
             
-            await Api.badges.create(this.state.form)
+            await api.badges.create(this.state.form)
+            this.setState({loading:false})
 
             this.props.history.push('/')
-            this.setState({loading:false})
 
         } catch (error) {
             
