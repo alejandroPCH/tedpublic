@@ -66,7 +66,6 @@ class BadgeEdit extends React.Component{
 
         e.preventDefault()
         
-        console.log(this.state.form)
 
         // const name= await this.state.form.firstName
         // const lastName= await this.state.form.lastName

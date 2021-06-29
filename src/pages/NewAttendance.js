@@ -40,10 +40,15 @@ class NewBadge extends React.Component{
     }
 
     handleSummit=async e=>{
+        
+        // if the md5 of the email summited by the form is my hash, it will do nothing, but if isn't,  the hash is going to be put in an url linked to a random photo
 
+        if (this.state.form.avatarUrl!="6bc16b40952ca1cf49877a510db07b3d") {
+
+        this.state.form.avatarUrl=`https://www.gravatar.com/avatar/${this.state.form.avatarUrl}?d=identicon` 
+        }
         e.preventDefault()
         
-        console.log(this.state.form)
 
         // const name= await this.state.form.firstName
         // const lastName= await this.state.form.lastName
@@ -72,11 +77,12 @@ class NewBadge extends React.Component{
     render(){
         
         const form=this.state.form
-
-        if(this.state.loading)return<Loading/>
-
         const email=form.email
         let hash=0
+        
+        if(this.state.loading)return<Loading/>
+
+     
 
         
         // if the email box is empty... my photo will load
@@ -84,7 +90,6 @@ class NewBadge extends React.Component{
         else hash=Md5(email)
 
         form.avatarUrl=hash
-
 
 
         return(

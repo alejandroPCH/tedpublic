@@ -70,6 +70,7 @@ export class BadgeDetails extends Component {
                 <div className="container">
                     <div className="row">
                         
+            {console.log(this.props.match.params.badgeId)}
                     
 
                         <div className="badge__column column">

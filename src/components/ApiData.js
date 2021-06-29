@@ -30,14 +30,14 @@ const api = {
         // hey, if you're seeing this, try to uncomment one of these and see what happen :D
 
         // return []
-        // throw new Error("Oh gosh, we don't know what's happening")
+        // throw new Error("Oh gosh, we do not know what is happening")
 
         return callApi('/badges');
     },
     create(badge) {
 
       //un comment this and see what happen :D
-      // throw new Error("Your form wasn't summited, sorry my friend")
+      // throw new Error("Your form was not summited, sorry my friend")
 
       return callApi(`/badges`, {
         method: 'POST',

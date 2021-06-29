@@ -67,7 +67,7 @@ class BadgeForm extends React.Component{
                     
                 </div>
 
-                <button className="button__primary button">Save</button>
+                <button className="button--primary button">Save</button>
                
                 {this.props.error && 
 

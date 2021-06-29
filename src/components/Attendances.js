@@ -25,6 +25,7 @@ export class attendances extends React.Component {
         <ul className="list-unstyled">
 
         {this.props.attendanceList.map((person)=>{
+          
                 // map is a function, so it return something
 
                 console.log(person.avatarUrl)
@@ -32,6 +33,9 @@ export class attendances extends React.Component {
     
                   Photo=me
                 }else{
+
+
+                        
                   Photo=person.avatarUrl
                 }            
 
@@ -53,7 +57,7 @@ export class attendances extends React.Component {
         }
 
           <div className="badges__buttons">
-            <Link to="/new" className="button button__primary">
+            <Link to="/new" className="button button--primary">
              New Attendance
 
             </Link>
