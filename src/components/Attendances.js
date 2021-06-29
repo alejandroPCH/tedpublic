@@ -5,25 +5,54 @@ import NoPublic from './NoPublic'
 
 import BadgeItem from './BadgeItem'
 
+
+
+function useSearchBadge(personArray){
+
+  const [name , setName]=React.useState('')
+  const [filteredArray,setFilteredArray]=React.useState(personArray)
+
+
+//the argunment of useMemo is Other function
+  React.useMemo(() => {
+  
+
+      // personArray.fitler is going to bring the badges that match with the word  
+        // we need to save the filter operation in this variable in order to use it
+      const result=personArray.filter(badge=>{
+        //badge is just a named that i add, but it can be anyone
+
+      //and here, all badges that match are going to be returned
+      // no matter if is the first name or the last name
+      return `${badge.firstName} ${badge.lastName}`
+                .toLowerCase()
+                  .includes(name.toLowerCase())
+                            // the name and what the user typed needs to be in lower case
+      })
+
+    //and whe save it in state
+    setFilteredArray(result)
+
+  }  
+  
+  , [personArray,name])
+
+
+  return {filteredArray,setName,name}
+}
+
+
+
 function Attendances(props){
 
   const personArray=props.attendanceList
+  const  {filteredArray,setName,name}=useSearchBadge(personArray)
 
 
   let Photo=''
-  const [name , setName]=React.useState('')
   
 
-console.log(personArray)
-  // personArray.fitler is going to bring the badges that match with the word  
-  const filteredArray=personArray.filter(badge=>{
-                              //badge is just a named that i add, but it can be anyone
 
-    //and here, all badges that match are going to be returned
-      // no matter if is the first name or the last name
-    return `${badge.firstName} ${badge.lastName}`.toLowerCase().includes(name.toLowerCase())
-                                          // the name and what the user typed needs to be in lower case
-  })
 
     if(filteredArray.length===0){        
         
@@ -42,7 +71,7 @@ console.log(personArray)
           </div>
            
       <NoPublic />
-      </React.Fragment>
+     </React.Fragment>
       )
 
     }  
