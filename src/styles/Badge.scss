@@ -1,4 +1,5 @@
 $min-width:800px;
+$red-ted-color:#cc1a1a;
 .badge {
   margin: 0 auto;
     background: #ffffff;
@@ -44,9 +45,9 @@ $min-width:800px;
       font-weight: 700;
       flex-direction: column;
       align-items: center;      
-      padding: 0.9rem 0;
+      padding: 1.5rem 0;
       background: #f4f4f7;
-
+      font-size: larger;
     }
       }
     
@@ -59,10 +60,8 @@ $min-width:800px;
       
         aspect-ratio: 1 / 1;
 
-
-        width: clamp(100px, 15vw, 140px);
-        height: clamp(100px, 15vw, 140px);
-      
+        width: clamp(150px, 15vw, 190px);
+        height: clamp(150px, 15vw, 190px);
 
       }
       
@@ -83,7 +82,7 @@ $min-width:800px;
   .info--jobTitle{
     font-weight: 700;
     padding:1rem 0;
-    font-size: clamp(1.5rem,1.5vw,3rem);
+    font-size: clamp(1.7rem, 2vw, 2.2rem);
 
   }
   @media screen and (max-width: $min-width) {

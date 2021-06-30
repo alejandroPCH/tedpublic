@@ -46,18 +46,19 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1rem;
-  max-width: 580px;
+  padding: 1.5rem;
+  max-width: 680px;
   min-width: 300px;
   width: 100vw;
+  font-size: x-large;
 }
 
 .attendance__avatar {
   border-radius: 50%;
   background: #a3a3a3;
   margin-right: 0.5rem;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
 }
 
 .attendance__twitter {
