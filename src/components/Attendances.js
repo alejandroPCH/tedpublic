@@ -17,7 +17,7 @@ function useSearchBadge(personArray){
 //the argunment of useMemo is Other function
   React.useMemo(() => {
   
-
+    
       // personArray.fitler is going to bring the badges that match with the word  
         // we need to save the filter operation in this variable in order to use it
       const result=personArray.filter(badge=>{
