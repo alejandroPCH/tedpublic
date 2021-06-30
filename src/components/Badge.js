@@ -24,7 +24,7 @@ class Badge extends React.Component{
 
                 
             <div className="badge__header">
-                <Link to="/attendance" >
+                <Link to="/tedpublic" >
                 <img src={Logo} alt="Ted Cover Page"></img>
                 </Link>
             </div>

@@ -16,12 +16,12 @@ import BadgeDetails from '../pages/BadgeDetails'
         <Layout>
 
             <Switch>
-                <Route exact path="/attendance" component={MainPage} />
-                <Route exact path="/attendance/new" component={NewAttendance} />
+                <Route exact path="/tedpublic" component={MainPage} />
+                <Route exact path="/tedpublic/new" component={NewAttendance} />
 
-                <Route exact path="/attendance/:badgeId" component={BadgeDetails} />
+                <Route exact path="/tedpublic/:badgeId" component={BadgeDetails} />
 
-                <Route exact path="/attendance/:badgeId/edit" component={BadgeEdit} />
+                <Route exact path="/tedpublic/:badgeId/edit" component={BadgeEdit} />
                 <Route component={NotFound}/>
 
             </Switch> 

@@ -96,7 +96,7 @@ function Attendances(props){
                 
                 
                 <li key={person.id}>
-              <Link to={`attendance/${person.id}/` } className="attendance">
+              <Link to={`tedpublic/${person.id}/` } className="attendance">
 
               <BadgeItem badgeValue={person} profilePhoto={Photo}/>
                
@@ -112,7 +112,7 @@ function Attendances(props){
         
         </ul>
         <div className="badges__buttons">
-            <Link to="/attendance/new" className="button button--primary">
+            <Link to="/tedpublic/new" className="button button--primary">
              New Attendance
             </Link>
                 

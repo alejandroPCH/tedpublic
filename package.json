@@ -2,7 +2,7 @@
   "name": "ted-talk-audience",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://alejandropch.github.io/tedpublic/attendance/",
+  "homepage": "https://alejandropch.github.io/tedpublic/",
 
   "scripts": {
     "start": "npm-run-all -p client server",

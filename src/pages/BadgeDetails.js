@@ -44,7 +44,7 @@ export class BadgeDetails extends Component {
 
             this.setState({loading:false})
 
-            this.props.history.push('/attendance')
+            this.props.history.push('/tedpublic')
 
 
         } catch (error) {

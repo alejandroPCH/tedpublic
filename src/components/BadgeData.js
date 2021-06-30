@@ -30,7 +30,7 @@ export function BadgeData(props){
                 <div className="edit">
 
 
-                    <Link className="button--primary button edit--button" to={`/attendance/${person.id}/edit`}>Edit Badge</Link>
+                    <Link className="button--primary button edit--button" to={`/tedpublic/${person.id}/edit`}>Edit Badge</Link>
             
                 </div>
 
