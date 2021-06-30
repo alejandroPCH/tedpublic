@@ -96,7 +96,7 @@ function Attendances(props){
                 
                 
                 <li key={person.id}>
-              <Link to={`${person.id}/` } className="attendance">
+              <Link to={`tedpublic/${person.id}/` } className="attendance">
 
               <BadgeItem badgeValue={person} profilePhoto={Photo}/>
                
