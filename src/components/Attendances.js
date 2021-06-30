@@ -4,6 +4,7 @@ import me from '../assets/images/me.jpg'
 import NoPublic from './NoPublic'
 
 import BadgeItem from './BadgeItem'
+import Searcher from './Searcher'
 
 
 
@@ -60,15 +61,7 @@ function Attendances(props){
      return(
       <React.Fragment>
 
-      <div className="filter">
-      
-            <label>Filter Badges</label>
-  
-            <input type="text" className="filter__box"
-                    value={name} onChange={(e)=>{
-                      setName(e.target.value)}}></input>
-      
-          </div>
+      <Searcher name={name} setName={setName}/>
            
       <NoPublic />
      </React.Fragment>
@@ -79,23 +72,12 @@ function Attendances(props){
     return (
 
       <React.Fragment>
-        <div className="badges__buttons">
-            <Link to="/new" className="button button--primary">
-             New Attendance
-            </Link>
-                
-          </div>
+        <Searcher name={name} setName={setName}/>
+
+       
            
         <ul className="list-unstyled">
-          <div className="filter">
-      
-            <label>Filter Badges</label>
-  
-            <input type="text" className="filter__box"
-                    value={name} onChange={(e)=>{
-                      setName(e.target.value)}}></input>
-      
-          </div>
+
             {filteredArray.map((person)=>{
             
                 // map is a function, so it return something
@@ -129,6 +111,12 @@ function Attendances(props){
 
         
         </ul>
+        <div className="badges__buttons">
+            <Link to="/new" className="button button--primary">
+             New Attendance
+            </Link>
+                
+          </div>
       </React.Fragment>
 
         )

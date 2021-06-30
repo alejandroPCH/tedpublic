@@ -33,7 +33,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .attendance {
@@ -61,6 +61,7 @@
 }
 
 .attendance__twitter {
+  white-space: nowrap;
   color: #1da1f2;
 }
 
@@ -79,6 +80,9 @@
 }
 
 .error-badge {
+  max-width: 580px;
+  min-width: 300px;
+  width: 100vw;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,7 +98,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 500px;
+  height: 64vh;
   color: #f1f1f1;
 }
 

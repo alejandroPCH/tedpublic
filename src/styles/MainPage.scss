@@ -24,7 +24,7 @@ $red-ted-color:#cc1a1a;
     &__buttons{
       justify-content: flex-end;
       display: flex;
-      margin-top: 1rem;
+      margin-top: 0.5rem;
     }
     
   }
@@ -48,6 +48,7 @@ $red-ted-color:#cc1a1a;
       height: 80px;
     }
     &__twitter {
+      white-space: nowrap;
       color: #1da1f2;
       &--logo {
         display: inline-block;
@@ -68,6 +69,9 @@ $red-ted-color:#cc1a1a;
     margin-bottom: 2rem;
   }
 .error-badge{
+  max-width: 580px;
+    min-width: 300px;
+    width: 100vw;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -76,8 +80,7 @@ $red-ted-color:#cc1a1a;
   justify-content: center;
 
   
-
-  height: 500px;
+  height: 64vh;
   color: rgb(241, 241, 241);
 }  
 
