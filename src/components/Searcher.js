@@ -4,7 +4,7 @@ function Searcher(props) {
     return (
       <div className="filter">
       
-        <label>Filter Badges</label>
+        <label>Search Badges</label>
 
         <input type="text" className="filter__box"
                 value={props.name} onChange={(e)=>{

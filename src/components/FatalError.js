@@ -22,7 +22,6 @@ export class FatalError extends React.Component{
             
                 </div>
                 
-                {console.log("hdasd")}  
             </React.Fragment>
         )
     }

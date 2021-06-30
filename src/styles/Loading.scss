@@ -3,16 +3,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 60px);
     width: 100%;
     color: aliceblue;
 
+    height: 75vh;
+
 }
 .loader {
-    min-height: calc(100vh - 90px);
     display: flex;
-    justify-content: center;
-    align-items: center;
 
     div {
         width: 15px;

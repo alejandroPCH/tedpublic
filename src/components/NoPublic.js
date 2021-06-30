@@ -7,8 +7,8 @@ export class NoPublic extends Component {
         
         return (
                  <div className="error-badge">
-                <h3>We could not find anyone :(</h3>
-                <h2>Become our first Badge!</h2><br />
+                <h2>We could not find anyone :(</h2>
+                <br />
                 <Link className="button button--primary" to="/new"> 
                 Create my Badge
                 </Link>
