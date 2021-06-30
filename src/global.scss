@@ -59,17 +59,17 @@ display: flex;
 }
 
 .button.button--primary:not(:disabled):not(.disabled):hover {
-  background-color: #af1a29;
-  border-color: rgb(155, 20, 20);
+  background-color: #b82534;
+  border-color: rgb(167, 28, 28);
 }
 
 .button.button--primary:not(:disabled):not(.disabled):active {
-  background-color: rgb(148, 18, 18);
-  border-color: rgba(143, 15, 15, 0.699);
+  background-color: rgb(155, 30, 30);
+  border-color: rgba(151, 21, 21, 0.699);
 }
 
 .button.button--primary:not(:disabled):not(.disabled):focus {
-  box-shadow: 0 0 0 0.2px rgba(189, 21, 21, 0.438);
+  box-shadow: 0 0 0 0.2px rgba(201, 30, 30, 0.438);
 }
 
 

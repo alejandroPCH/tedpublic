@@ -1,6 +1,5 @@
 import React from 'react'
-import '../styles/BadgeForm.css'
-
+import '../styles/BadgeData.css'
 
 class BadgeForm extends React.Component{
 
@@ -23,51 +22,51 @@ class BadgeForm extends React.Component{
 
         return(<>
 
-            <form className="container__form" action="" onSubmit={this.props.onSummit}>
+            <form className="values" action="" >
 
-                <div className="form firstName">
+                <div className="values__item">
                 
                     <label htmlFor="">First Name</label>
                     
                     <input /* am calling {this.props.onChange} because there is a prop sent as parameter*/
-                         onChange={this.props.onChange} type="text" className="form--input" name="firstName" value={this.props.data.firstName} />
+                         onChange={this.props.onChange} type="text" className="values__item--input" name="firstName" value={this.props.data.firstName} />
 
                 </div>
 
-                <div className="form lastName">
+                <div className="values__item">
 
                     <label htmlFor="">Last Name</label>
                     
-                        <input onChange={this.props.onChange} type="text" className="form--input" name="lastName" value={this.props.data.lastName} /> 
+                        <input onChange={this.props.onChange} type="text" className="values__item--input" name="lastName" value={this.props.data.lastName} /> 
                 </div>
                        
               
 
 
 
-                <div className="form jobTitle">                       
+                <div className="values__item">                       
 
                      <label htmlFor="">Job Title</label>
-                    <input onChange={this.props.onChange} type="text" className="form--input" name="jobTitle" value={this.props.data.jobTitle} /> 
+                    <input onChange={this.props.onChange} type="text" className="values__item--input" name="jobTitle" value={this.props.data.jobTitle} /> 
                 
                 </div>
 
-                <div className="form email">
+                <div className="values__item">
 
                     <label htmlFor="">Email</label>
 
-                    <input onChange={this.props.onChange} type="text" className="form--input" name="email" value={this.props.data.email} /> 
+                    <input onChange={this.props.onChange} type="text" className="values__item--input" name="email" value={this.props.data.email} /> 
                 </div>
 
-                <div className="form twitter">
+                <div className="values__item">
 
                     <label htmlFor="">Twitter</label>
                     
-                    <input onChange={this.props.onChange} type="text" className="form--input" name="twitter" value={this.props.data.twitter} /> 
+                    <input onChange={this.props.onChange} type="text" className="values__item--input" name="twitter" value={this.props.data.twitter} /> 
                     
                 </div>
 
-                <button className="button--primary button">Save</button>
+             
                
                 {this.props.error && 
 
@@ -75,7 +74,10 @@ class BadgeForm extends React.Component{
                     <p className="error-form--red">Error: <span className="error-form--white">{this.props.error.message} 😭</span></p>
 
                 </div>}
+                
             </form>
+
+            <button onClick={this.props.onSummit} className="button--primary button save">Save</button>
         </>
         )
     }

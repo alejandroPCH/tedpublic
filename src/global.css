@@ -63,18 +63,18 @@ h1 {
 }
 
 .button.button--primary:not(:disabled):not(.disabled):hover {
-  background-color: #af1a29;
-  border-color: #9b1414;
+  background-color: #b82534;
+  border-color: #a71c1c;
 }
 
 .button.button--primary:not(:disabled):not(.disabled):active {
-  background-color: #941212;
-  border-color: rgba(143, 15, 15, 0.699);
+  background-color: #9b1e1e;
+  border-color: rgba(151, 21, 21, 0.699);
 }
 
 .button.button--primary:not(:disabled):not(.disabled):focus {
-  -webkit-box-shadow: 0 0 0 0.2px rgba(189, 21, 21, 0.438);
-          box-shadow: 0 0 0 0.2px rgba(189, 21, 21, 0.438);
+  -webkit-box-shadow: 0 0 0 0.2px rgba(201, 30, 30, 0.438);
+          box-shadow: 0 0 0 0.2px rgba(201, 30, 30, 0.438);
 }
 
 .button.button-cancel {

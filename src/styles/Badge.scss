@@ -12,7 +12,7 @@ $min-width:800px;
     &__header {
         padding: 0.5rem 0;
         min-height: 80px;
-        background: #000000;
+        background: #0a0a0a;
         justify-content: center;
         display: flex;
       a{
@@ -44,7 +44,7 @@ $min-width:800px;
       font-weight: 700;
       flex-direction: column;
       align-items: center;      
-      padding: 0.5rem 0;
+      padding: 0.9rem 0;
       background: #f4f4f7;
 
     }
@@ -82,7 +82,7 @@ $min-width:800px;
   
   .info--jobTitle{
     font-weight: 700;
-    padding-bottom:1rem ;
+    padding:1rem 0;
     font-size: clamp(1.5rem,1.5vw,3rem);
 
   }

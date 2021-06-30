@@ -35,7 +35,7 @@ body {
 }
 
 .badge__column {
-  height: 70vh;
+  height: 75vh;
   -webkit-box-ordinal-group: 1;
       -ms-flex-order: 0;
           order: 0;

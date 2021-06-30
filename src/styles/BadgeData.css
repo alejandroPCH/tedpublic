@@ -24,7 +24,7 @@
 }
 
 .values {
-  background-color: black;
+  background-color: #a11f1f;
   position: relative;
   list-style: none;
   display: -webkit-box;
@@ -34,10 +34,14 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 50px;
-  margin-top: 30px;
-  padding: 0 100px;
-  padding-bottom: 50px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  padding: 0 30px;
+  padding-bottom: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
 }
 
 .values__item {
@@ -51,6 +55,40 @@
   margin-left: 10px;
   font-weight: 700;
   font-size: clamp(1rem, 1.5vw, 3rem);
+}
+
+.values__item--input {
+  color: #fff;
+  margin-left: 10px;
+  border: 1.5px solid transparent;
+  height: 25px;
+  background-color: rgba(226, 92, 92, 0.541);
+}
+
+.values__item--input:focus {
+  border-style: inset;
+  outline: none;
+  border: 1.5px solid #cc3a3a;
+}
+
+.delete {
+  margin-top: 10px;
+}
+
+.delete--text {
+  text-align: center;
+}
+
+.save {
+  cursor: pointer;
+  max-width: 300px;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-width: 800px) {
@@ -70,6 +108,10 @@
     margin-left: 10px;
     font-weight: 700;
     font-size: clamp(1.1rem, 1.5vw, 3rem);
+  }
+  .delete {
+    margin-top: 20px;
+    margin-bottom: 40px;
   }
 }
 /*# sourceMappingURL=BadgeData.css.map */

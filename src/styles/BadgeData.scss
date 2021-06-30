@@ -14,16 +14,18 @@ $min-width:800px;
     justify-content: center;
 }
 .values{
-    background-color: black;
+    background-color: rgb(161, 31, 31);
     position: relative;
     list-style: none;
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;
-    margin-top: 30px;
-    padding: 0 100px;
-    padding-bottom:50px; 
-  
+    margin-bottom: 40px;
+    margin-top: 20px;
+    padding: 0 30px;
+    padding-bottom:60px;
+    justify-content: center; 
+    border-radius: 10px;
+
     &__item {
         font-weight: 500;
         font-size:  clamp(1rem,1.5vw,2.9rem);
@@ -35,9 +37,43 @@ $min-width:800px;
             font-size: clamp(1rem,1.5vw,3rem);
 
         }
+        
+      
+    
+        &--input {
+            color: #fff;
+            margin-left: 10px;
+            border: 1.5px solid transparent;
+            height: 25px;
+            background-color: rgba(226, 92, 92, 0.541);
+          }
+          
+        &--input:focus {
+        
+            border-style: inset;
+            outline: none;
+            border: 1.5px solid rgb(204, 58, 58);
+        }
     }
    
+}
+
+.delete{
+
+    margin-top: 10px;
+  
+    &--text{
+        text-align: center;
     }
+}
+.save{
+    cursor: pointer;
+max-width: 300px;
+    width: 100%; 
+    align-items: center;
+    justify-content: center;
+}
+
     @media screen and (max-width: $min-width) {
 
         .values{
@@ -55,4 +91,9 @@ $min-width:800px;
             }
         }
 
+        .delete{
+            margin-top: 20px;
+
+            margin-bottom: 40px;
+        }
     }

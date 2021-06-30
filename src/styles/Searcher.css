@@ -10,8 +10,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 400px;
+  font-size: 0.9rem;
   width: 100vw;
+  max-width: 300px;
+  margin-bottom: 2px;
+  border-radius: 2px;
 }
 
 .filter__box {

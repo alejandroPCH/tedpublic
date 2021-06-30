@@ -34,10 +34,10 @@ export function BadgeData(props){
             
                 </div>
 
-                <div>
+                <div className="delete">
 
 
-                    <p>Do you want to delete your Badge? <a className="button-danger" onClick={props.handleOpen}>Delete Badge</a></p>
+                    <p className="delete--text">Do you want to delete your Badge? <a className="button-danger" onClick={props.handleOpen}>Delete Badge</a></p>
 
                    <DeleteBadgeFromModal modalIsOpen={props.modalIsOpen} isClose={props.handleClose} handleDeleteBadge={props.handleDeleteBadge}/>
               
