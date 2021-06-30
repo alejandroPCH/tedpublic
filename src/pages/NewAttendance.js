@@ -63,7 +63,7 @@ class NewBadge extends React.Component{
             await api.badges.create(this.state.form)
             this.setState({loading:false})
 
-            this.props.history.push('/')
+            this.props.history.push('/attendance')
 
         } catch (error) {
             

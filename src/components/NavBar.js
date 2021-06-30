@@ -9,7 +9,7 @@ class NavBar extends React.Component{
         return(
         <div className="navbar">
 
-            <Link to="/">
+            <Link to="/attendance">
             
             <img className="navbar__ted-logo" src={logo}></img>
             </Link>

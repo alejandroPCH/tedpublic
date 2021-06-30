@@ -44,7 +44,7 @@ export class BadgeDetails extends Component {
 
             this.setState({loading:false})
 
-            this.props.history.push('/')
+            this.props.history.push('/attendance')
 
 
         } catch (error) {
@@ -71,6 +71,7 @@ export class BadgeDetails extends Component {
             const data= await api.badges.read(this.props.match.params.badgeId)
             this.setState({loading:false,data:data})
 
+            console.log(this.state)
 
         } catch (error) {
             this.setState({loading:false,error:error})
@@ -83,7 +84,7 @@ export class BadgeDetails extends Component {
     render() {
        
         if(this.state.loading)return<Loading/>
-        if(this.state.error)return <FatalError error={this.state.error}/>
+        if(this.state.error||this.state.data==undefined)return <FatalError error={this.state.error}/>
         
         const person=this.state.data
         const email=person.email
