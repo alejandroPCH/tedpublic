@@ -11,20 +11,29 @@
     },
     {
       "id": "d00d3614-101a-44ca-b6c2-0be075aeed3d",
-      "firstName": "Marjorie",
-      "lastName": "Rodriguez",
-      "email": "Ilene66@hotmail.com",
-      "jobTitle": "Human Research Architect",
-      "twitter": "ajorRodriguez61545",
+      "firstName": "Elon",
+      "lastName": "Musk",
+      "email": "elonmusk@spacex.com",
+      "jobTitle": "CEO at Testla & SpaceX ",
+      "twitter": "elonmusk",
+      "avatarUrl": "https://www.gravatar.com/avatar/d57a8be8cb9219609905da25d5f3e50a?d=identicon"
+    },
+    {
+      "id": "d00d3614-101a-44ca-b6c2-0be075aeed3d",
+      "firstName": "Linus",
+      "lastName": "Torvalds",
+      "email": "linustorvals@hotmail.com",
+      "jobTitle": "Software Engineer",
+      "twitter": "Linus__Torvalds",
       "avatarUrl": "https://www.gravatar.com/avatar/d57a8be8cb9219609905da25d5f3e50a?d=identicon"
     },
     {
       "id": "63c03386-33a2-4512-9ac1-354ad7bec5e9",
-      "firstName": "Daphney",
-      "lastName": "Torphy",
-      "email": "Ron61@hotmail.com",
-      "jobTitle": "National Markets Officer",
-      "twitter": "DaphneyTorphy96105",
+      "firstName": "Peter",
+      "lastName": "Thiel",
+      "email": "peterthiel@gmail.com",
+      "jobTitle": "Investor",
+      "twitter": "peterthiel",
       "avatarUrl": "https://www.gravatar.com/avatar/e74e87d40e55b9ff9791c78892e55cb7?d=identicon"
     }
   ]
