@@ -112,7 +112,7 @@ function Attendances(props){
         
         </ul>
         <div className="badges__buttons">
-            <Link to="tedpublic/new" className="button button--primary">
+            <Link to="/tedpublic/new" className="button button--primary">
              New Attendance
             </Link>
                 
