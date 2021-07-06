@@ -19,7 +19,7 @@ import BadgeDetails from '../pages/BadgeDetails'
                 <Route exact path="/tedpublic/" component={MainPage} />
                 <Route exact path="/tedpublic/:badgeId" component={BadgeDetails} />
 
-                <Route exact path="/tedpublic/new" component={NewAttendance} />
+                <Route exact path="/tedpublic/badge/new" component={NewAttendance} />
 
 
                 <Route exact path="/tedpublic/:badgeId/edit" component={BadgeEdit} />
