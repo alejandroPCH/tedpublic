@@ -38,6 +38,7 @@ $red-ted-color:#cc1a1a;
        height: 40vh;
         padding: 0 1rem ;
         font-size: clamp(1rem,1.5vw,3rem);
+        justify-content: space-evenly;
       }
       
     &--info {
@@ -59,9 +60,8 @@ $red-ted-color:#cc1a1a;
         margin-right: 1rem;
       
         aspect-ratio: 1 / 1;
-
-        width: clamp(150px, 15vw, 190px);
-        height: clamp(150px, 15vw, 190px);
+        width: clamp(150px,12vw,190px);
+        height: clamp(150px,12vw,190px);
 
       }
       

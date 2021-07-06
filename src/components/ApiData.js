@@ -9,6 +9,8 @@ const simulateNetworkLatency = (min = 30, max = 1500) =>
   delay(randomNumber(min, max));
 
 async function callApi(endpoint, options = {}) {
+  
+  if(endpoint=='new')endpoint=null;
   await simulateNetworkLatency();
 
   options.headers = {
