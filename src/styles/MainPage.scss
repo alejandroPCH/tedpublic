@@ -1,5 +1,5 @@
 $red-ted-color:#cc1a1a;
-
+$min-width:685px;
 .background-img {
     z-index: -1;
     top:0;
@@ -14,6 +14,13 @@ $red-ted-color:#cc1a1a;
     height: 100vh;
   }
  
+  
+  @media screen and (max-width: $min-width) {
+    .background-img {
+   background: none;
+    }
+    
+  }
 
 
   .badges {

@@ -35,7 +35,6 @@ export class BadgeDetails extends Component {
     }
     
     handleDeleteBadge=async e=>{
-        console.log(this.props.match.params.badgeId)
         this.setState({loading:true, error:null})
 
         try {
@@ -71,7 +70,6 @@ export class BadgeDetails extends Component {
             const data= await api.badges.read(this.props.match.params.badgeId)
             this.setState({loading:false,data:data})
 
-            console.log(this.state)
 
         } catch (error) {
             this.setState({loading:false,error:error})
