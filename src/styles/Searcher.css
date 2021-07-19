@@ -17,15 +17,47 @@
   border-radius: 2px;
 }
 
-.filter__box {
+.filter__container {
   border: 1.5px solid transparent;
   height: 25px;
   background-color: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.filter__box:focus {
+.filter__icon {
+  background-image: url(../assets/icons/loupe.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.filter__box {
+  height: 25px;
+  background-color: #eee;
+  width: 100%;
+  border: hidden;
+}
+
+.filter__container:focus {
   border-style: inset;
   outline: none;
   border: 1.5px solid #c5c5c5;
+}
+
+.filter__box:focus {
+  outline: none;
 }
 /*# sourceMappingURL=Searcher.css.map */

@@ -38,7 +38,12 @@
   ],
   "main": "index.js",
   "keywords": [
-    "React.js", "JavaScript","Sass","Css","HTML","TED"
+    "React.js",
+    "JavaScript",
+    "Sass",
+    "Css",
+    "HTML",
+    "TED"
   ],
   "author": "alejandro <alejandropachas1@gmail.com>",
   "license": "MIT",

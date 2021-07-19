@@ -6,9 +6,14 @@ function Searcher(props) {
       
         <label>Search Badges</label>
 
+      <div className="filter__container">
+        
+        <span className="filter__icon"></span>
+
         <input type="text" className="filter__box"
                 value={props.name} onChange={(e)=>{
                     props.setName(e.target.value)}}></input>
+      </div>
 
     </div>
     )
