@@ -37,8 +37,10 @@
     "not op_mini all"
   ],
   "main": "index.js",
-  "keywords": ["React.js, JavaScript,Sass,Css,HTML, TED"],
+  "keywords": [
+    "React.js", "JavaScript","Sass","Css","HTML","TED"
+  ],
   "author": "alejandro <alejandropachas1@gmail.com>",
   "license": "MIT",
-  "description": ""
+  "description": "Ted Public is a web page that manage the participants of a conference"
 }
