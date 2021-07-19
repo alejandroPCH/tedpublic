@@ -100,8 +100,7 @@ max-width: 300px;
                 &--info{
                     margin-left: 10px;
                     font-weight: 700;
-                    font-size: clamp(1.1rem,1.5vw,3rem);
-            
+                    font-size: clamp(1rem,1.5vw,3rem);
                 }
                 &--input {
                     width: 100%;

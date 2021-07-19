@@ -119,7 +119,7 @@
   .values__item--info {
     margin-left: 10px;
     font-weight: 700;
-    font-size: clamp(1.1rem, 1.5vw, 3rem);
+    font-size: clamp(1rem, 1.5vw, 3rem);
   }
   .values__item--input {
     width: 100%;
