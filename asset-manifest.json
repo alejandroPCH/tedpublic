@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/tedpublic/static/css/main.f96da19a.chunk.css",
+    "main.js": "/tedpublic/static/js/main.a807988f.chunk.js",
+    "main.js.map": "/tedpublic/static/js/main.a807988f.chunk.js.map",
+    "runtime-main.js": "/tedpublic/static/js/runtime-main.479995a3.js",
+    "runtime-main.js.map": "/tedpublic/static/js/runtime-main.479995a3.js.map",
+    "static/js/2.692816d8.chunk.js": "/tedpublic/static/js/2.692816d8.chunk.js",
+    "static/js/2.692816d8.chunk.js.map": "/tedpublic/static/js/2.692816d8.chunk.js.map",
+    "index.html": "/tedpublic/index.html",
+    "static/css/main.f96da19a.chunk.css.map": "/tedpublic/static/css/main.f96da19a.chunk.css.map",
+    "static/js/2.692816d8.chunk.js.LICENSE.txt": "/tedpublic/static/js/2.692816d8.chunk.js.LICENSE.txt",
+    "static/media/MainPage.css": "/tedpublic/static/media/twitter-logo.16ec4858.svg",
+    "static/media/Searcher.css": "/tedpublic/static/media/loupe.28b0ad10.svg",
+    "static/media/me.a1eb3f85.jpg": "/tedpublic/static/media/me.a1eb3f85.jpg",
+    "static/media/NotFound.css": "/tedpublic/static/media/microphone.2837aac1.svg",
+    "static/media/ted-logo.480a97fe.png": "/tedpublic/static/media/ted-logo.480a97fe.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.479995a3.js",
+    "static/js/2.692816d8.chunk.js",
+    "static/css/main.f96da19a.chunk.css",
+    "static/js/main.a807988f.chunk.js"
+  ]
+}

@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,gBAAgB,CAAA;EAEZ,KAAK,EAAC,OAAkB;EACxB,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,cAAc,EAAE,MAAM;CACzB;;AACD,AAAA,IAAI,CAAA;EACA,gBAAgB,EAAC,OAAO;CAC3B",
-    "sources": [
-        "BadgeForm.scss"
-    ],
-    "names": [],
-    "file": "BadgeForm.css"
-}
