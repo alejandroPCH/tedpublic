@@ -13,12 +13,6 @@
   height: 100vh;
 }
 
-@media screen and (max-width: 685px) {
-  .background-img {
-    background: none;
-  }
-}
-
 .badges {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,7 +50,7 @@
   max-width: 680px;
   min-width: 300px;
   width: 100vw;
-  font-size: x-large;
+  font-size: clamp(1rem, 5vw, 1.5rem);
 }
 
 .attendance__avatar {
@@ -126,5 +120,21 @@
 .error-form--white {
   font-size: 1rem;
   color: #f7f7f7;
+}
+
+@media screen and (max-width: 685px) {
+  .background-img {
+    background: none;
+  }
+  .filter {
+    margin: 0 auto;
+    font-size: clamp(1rem, 5vw, 1.5rem);
+  }
+  .badges__buttons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: clamp(1rem, 5vw, 1.5rem);
+  }
 }
 /*# sourceMappingURL=MainPage.css.map */

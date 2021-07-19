@@ -106,6 +106,7 @@
 
 @media screen and (max-width: 800px) {
   .badge {
+    margin-top: 5rem;
     min-width: 270px;
     width: 80vw;
   }
